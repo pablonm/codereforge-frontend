@@ -2,7 +2,7 @@ import React from 'react'
 import axios from 'axios'
 
 const Home = () => {
-  // console.log(props)
+  console.log(props)
   return <div>Welcome to Jami!</div>
 }
 
