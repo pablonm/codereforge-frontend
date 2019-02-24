@@ -1,8 +1,8 @@
 import React from 'react'
 import axios from 'axios'
 
-const Home = props => {
-  console.log(props)
+const Home = () => {
+  // console.log(props)
   return <div>Welcome to Jami!</div>
 }
 
