@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import axios from 'axios'
-import { parseHash } from '../../utils/auth0'
+import { parseHash, storeSession } from '../../utils/auth0'
 
 class Redirect extends Component {
   componentDidMount() {
@@ -11,18 +10,7 @@ class Redirect extends Component {
           this.redirect('/')
           return
         }
-        const { idToken, accessToken } = result
-        localStorage.setItem('idToken', idToken)
-        localStorage.setItem('accessToken', accessToken)
-        await axios.post(
-          `${process.env.REACT_APP_API_URL}users`,
-          {},
-          {
-            headers: {
-              authorization: idToken,
-            },
-          }
-        )
+        storeSession(result)
         this.redirect()
       })
     } catch {
