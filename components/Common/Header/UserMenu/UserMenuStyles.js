@@ -17,7 +17,7 @@ export const UserMenuDropdownStyle = createGlobalStyle`
     }
 
     .ant-menu-item-divider {
-      color: rgba(255, 255, 255, 0.65);
+      background-color: #2E2E2E;
     }
   }
 `

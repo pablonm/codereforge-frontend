@@ -1,11 +1,12 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Row, Col, Badge, Avatar, Dropdown } from 'antd'
-import { login, isAuthenticated, logout } from '../../../utils/auth0'
+import { login, logout } from '../../../utils/auth0'
 import { Logo, HeaderContainer, Notifications, UserBar, User, LoginButton } from './HeaderStyles'
 import UserMenu from './UserMenu/UserMenu'
 
-const Header = () => {
+const Header = ({ user }) => {
   const loginHandler = () => {
     login()
   }
@@ -27,7 +28,7 @@ const Header = () => {
           <Col xs={24} sm={24} md={4} lg={4} xl={4}>
             <Logo src="/static/img/stackoverflow.png" alt="codereforge logo" />
           </Col>
-          {isAuthenticated() ? (
+          {user ? (
             <UserBar xs={24} sm={24} md={4} lg={4} xl={4}>
               <Notifications>
                 <Badge status="error" offset={[0, 18]}>
@@ -55,6 +56,18 @@ const Header = () => {
       </Col>
     </HeaderContainer>
   )
+}
+
+Header.propTypes = {
+  user: PropTypes.shape({
+    name: PropTypes.string,
+    email: PropTypes.string,
+    picture: PropTypes.string,
+  }),
+}
+
+Header.defaultProps = {
+  user: null,
 }
 
 export default Header
