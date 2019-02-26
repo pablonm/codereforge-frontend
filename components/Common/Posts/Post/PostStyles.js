@@ -2,12 +2,14 @@ import styled from 'styled-components'
 import { Tag as AntTag } from 'antd'
 
 export const PostContainer = styled.article`
-  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100px;
   border: 1px solid #2e2e2e;
   background-color: #1c1c1c;
-  padding: 5px 20px;
+  padding: 10px 20px;
   margin-bottom: 10px;
-  border-radius: 5px;
   cursor: pointer;
 
   :hover {
@@ -15,7 +17,10 @@ export const PostContainer = styled.article`
   }
 `
 
-export const Title = styled.h2``
+export const Title = styled.h2`
+  font-size: 18px;
+  margin-bottom: 5px;
+`
 
 export const Tags = styled.div``
 
@@ -24,6 +29,17 @@ export const Tag = styled(AntTag)`
   background: #610b21;
   border-color: #8a084b;
 `
-export const Comments = styled.div`
+export const PostInfo = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+`
+
+export const PostInfoUnit = styled.div`
   display: inline-block;
+  margin-left: 20px;
+
+  svg {
+    margin-right: 5px;
+  }
 `

@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Row, Col } from 'antd'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { PostContainer, Title, Tags, Tag, Comments } from './PostStyles'
+import { PostContainer, Title, Tags, Tag, PostInfo, PostInfoUnit } from './PostStyles'
 
 const Post = ({ post }) => {
   return (
@@ -14,12 +14,26 @@ const Post = ({ post }) => {
             <Tag>React</Tag>
             <Tag>Javascript</Tag>
           </Tags>
-          <Comments>
-            <FontAwesomeIcon icon={{ prefix: 'fas', iconName: 'file-code' }} />
-            <span>
-              <strong>1</strong> file
-            </span>
-          </Comments>
+          <PostInfo>
+            <PostInfoUnit>
+              <FontAwesomeIcon icon={{ prefix: 'far', iconName: 'file' }} />
+              <span>
+                <strong>{post.code_files.length}</strong>
+              </span>
+            </PostInfoUnit>
+            <PostInfoUnit>
+              <FontAwesomeIcon icon={{ prefix: 'fas', iconName: 'code' }} />
+              <span>
+                <strong>{post.refactorings.length}</strong>
+              </span>
+            </PostInfoUnit>
+            <PostInfoUnit>
+              <FontAwesomeIcon icon={{ prefix: 'far', iconName: 'comment-alt' }} />
+              <span>
+                <strong>{post.comments.length}</strong>
+              </span>
+            </PostInfoUnit>
+          </PostInfo>
         </PostContainer>
       </Col>
     </Row>

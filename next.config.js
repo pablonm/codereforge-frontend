@@ -1,3 +1,5 @@
+const withCSS = require('@zeit/next-css')
+
 const dotEnvResult = require('dotenv').config()
 
 if (dotEnvResult.error) {
@@ -24,12 +26,14 @@ const configureLess = () => {
   if (typeof require !== 'undefined') {
     require.extensions['.less'] = file => {}
   }
-  return withLess({
-    lessLoaderOptions: {
-      javascriptEnabled: true,
-      modifyVars: themeVariables, // make your antd custom effective
-    },
-  })
+  return withCSS(
+    withLess({
+      lessLoaderOptions: {
+        javascriptEnabled: true,
+        modifyVars: themeVariables, // make your antd custom effective
+      },
+    })
+  )
 }
 
 const less = configureLess()

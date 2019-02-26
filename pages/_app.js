@@ -10,10 +10,23 @@ import {
   faCode,
   faMarker,
   faUser,
-  faFileCode,
 } from '@fortawesome/free-solid-svg-icons'
+import {
+  faFile as faFileReg,
+  faCommentAlt as faCommentAltReg,
+} from '@fortawesome/free-regular-svg-icons'
 
-library.add(faBell, faStar, faUserCog, faPowerOff, faCode, faMarker, faUser, faFileCode)
+library.add(
+  faBell,
+  faStar,
+  faUserCog,
+  faPowerOff,
+  faCode,
+  faMarker,
+  faUser,
+  faFileReg,
+  faCommentAltReg
+)
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {

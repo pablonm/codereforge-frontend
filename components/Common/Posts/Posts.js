@@ -1,14 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Post from './Post/Post'
+import { PostList } from './PostsStyles'
 
 const Posts = ({ posts }) => {
   return (
-    <ul>
+    <PostList>
       {posts.map(post => (
         <Post key={post._id} post={post} />
       ))}
-    </ul>
+    </PostList>
   )
 }
 
