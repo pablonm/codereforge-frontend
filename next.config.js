@@ -1,46 +1,44 @@
 const withCSS = require('@zeit/next-css')
+const withLess = require('@zeit/next-less')
+const fs = require('fs')
+const path = require('path')
+const dotEnv = require('dotenv')
+/* eslint-disable */
+const lessToJS = require('less-vars-to-js')
 
-const dotEnvResult = require('dotenv').config()
+const addEnv = conf => {
+  const dotEnvResult = dotEnv.config()
 
-if (dotEnvResult.error) {
-  throw dotEnvResult.error
+  if (dotEnvResult.error) {
+    throw dotEnvResult.error
+  }
+
+  const parsedVariables = dotEnvResult.parsed || {}
+  const dotEnvVariables = {}
+  Object.keys(parsedVariables).forEach(key => {
+    dotEnvVariables[key] = process.env[key]
+  })
+  return {
+    ...conf,
+    env: {
+      ...dotEnvVariables,
+    },
+  }
 }
 
-const parsedVariables = dotEnvResult.parsed || {}
-const dotEnvVariables = {}
-Object.keys(parsedVariables).forEach(key => {
-  dotEnvVariables[key] = process.env[key]
-})
-
-const configureLess = () => {
-  /* eslint-disable */
-  const withLess = require('@zeit/next-less')
-  const lessToJS = require('less-vars-to-js')
-  const fs = require('fs')
-  const path = require('path')
-  // Where your antd-custom.less file lives
+const addLess = () => {
   const themeVariables = lessToJS(
     fs.readFileSync(path.resolve(__dirname, './antd-theme.less'), 'utf8')
   )
-  // fix: prevents error when .less files are required by node
   if (typeof require !== 'undefined') {
-    require.extensions['.less'] = file => {}
+    require.extensions['.less'] = () => {}
   }
-  return withCSS(
-    withLess({
-      lessLoaderOptions: {
-        javascriptEnabled: true,
-        modifyVars: themeVariables, // make your antd custom effective
-      },
-    })
-  )
+  return withLess({
+    lessLoaderOptions: {
+      javascriptEnabled: true,
+      modifyVars: themeVariables,
+    },
+  })
 }
 
-const less = configureLess()
-
-module.exports = {
-  env: {
-    ...dotEnvVariables,
-  },
-  ...less,
-}
+module.exports = addEnv(withCSS(addLess()))

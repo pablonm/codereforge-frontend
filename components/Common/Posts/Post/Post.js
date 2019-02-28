@@ -11,8 +11,9 @@ const Post = ({ post }) => {
         <PostContainer>
           <Title>{post.name}</Title>
           <Tags>
-            <Tag>React</Tag>
-            <Tag>Javascript</Tag>
+            {post.tags.map(tag => (
+              <Tag key={tag._id}>{tag.name}</Tag>
+            ))}
           </Tags>
           <PostInfo>
             <PostInfoUnit>
@@ -45,7 +46,12 @@ Post.propTypes = {
     comments: PropTypes.arrayOf(PropTypes.string),
     refactorings: PropTypes.arrayOf(PropTypes.string),
     code_files: PropTypes.arrayOf(PropTypes.string),
-    tags: PropTypes.arrayOf(PropTypes.string),
+    tags: PropTypes.arrayOf(
+      PropTypes.shape({
+        _id: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+      })
+    ),
     _id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,

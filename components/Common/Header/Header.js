@@ -1,7 +1,8 @@
 import React from 'react'
+import Link from 'next/link'
 import PropTypes from 'prop-types'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Row, Col, Badge, Avatar, Dropdown } from 'antd'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { login, logout } from '../../../utils/auth0'
 import { Logo, HeaderContainer, Notifications, UserBar, User, LoginButton } from './HeaderStyles'
 import UserMenu from './UserMenu/UserMenu'
@@ -26,7 +27,9 @@ const Header = ({ user }) => {
       >
         <Row type="flex" justify="space-between">
           <Col xs={24} sm={24} md={4} lg={4} xl={4}>
-            <Logo src="/static/img/stackoverflow.png" alt="codereforge logo" />
+            <Link href="/">
+              <Logo src="/static/img/logo.png" alt="codereforge logo" />
+            </Link>
           </Col>
           {user ? (
             <UserBar xs={24} sm={24} md={4} lg={4} xl={4}>

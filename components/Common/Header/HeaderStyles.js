@@ -2,7 +2,9 @@ import styled from 'styled-components'
 import { Row, Col, Button } from 'antd'
 
 export const Logo = styled.img`
-  height: 50px;
+  height: 30px;
+  margin: 10px 0;
+  cursor: pointer;
 `
 
 export const HeaderContainer = styled(Row)`
@@ -29,7 +31,7 @@ export const UserBarClickable = styled.div`
 
 export const Notifications = styled(UserBarClickable)`
   .ant-badge {
-    margin-top: 14px;
+    margin-top: 17px;
   }
 
   svg {
@@ -39,7 +41,7 @@ export const Notifications = styled(UserBarClickable)`
 
 export const User = styled(UserBarClickable)`
   .ant-avatar {
-    margin-top: 8px;
+    margin-top: 10px;
   }
 `
 

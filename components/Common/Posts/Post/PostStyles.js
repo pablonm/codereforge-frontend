@@ -25,9 +25,11 @@ export const Title = styled.h2`
 export const Tags = styled.div``
 
 export const Tag = styled(AntTag)`
+  background-color: #1890ff;
+  border: none;
+  border-radius: 2px;
   color: white;
-  background: #610b21;
-  border-color: #8a084b;
+  padding-top: 1px;
 `
 export const PostInfo = styled.div`
   width: 100%;

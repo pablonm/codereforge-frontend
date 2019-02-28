@@ -1,10 +1,10 @@
 import React from 'react'
 import { Row, Col } from 'antd'
 import getAxios from '../utils/axios'
-import Header from '../components/Common/Header/Header'
 import Posts from '../components/Common/Posts/Posts'
 import NewPostWidget from '../components/Common/NewPostWidget/NewPostWidget'
 import withUser from '../components/HOC/withUser'
+import Header from '../components/Common/Header/Header'
 
 const Home = ({ posts, user }) => {
   return (
