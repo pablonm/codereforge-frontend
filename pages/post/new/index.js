@@ -78,8 +78,8 @@ class NewPost extends Component {
           >
             <h1 style={{ fontSize: '25px', marginTop: '20px' }}>New post</h1>
             <Row>
-              <Col xs={24} sm={24} md={12} lg={12} xl={12}>
-                <div style={{ height: '388px' }}>
+              <Col xs={24} sm={24} md={14} lg={14} xl={14}>
+                <div style={{ height: '386px' }}>
                   <CodeEditor
                     language={language}
                     onChange={this.codeChangeHandler}
@@ -90,9 +90,9 @@ class NewPost extends Component {
               <Col
                 xs={24}
                 sm={24}
-                md={{ span: 11, offset: 1 }}
-                lg={{ span: 11, offset: 1 }}
-                xl={{ span: 11, offset: 1 }}
+                md={{ span: 9, offset: 1 }}
+                lg={{ span: 9, offset: 1 }}
+                xl={{ span: 9, offset: 1 }}
                 style={{ marginTop: '38px' }}
               >
                 <Form.Item>
