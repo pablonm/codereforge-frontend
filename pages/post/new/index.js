@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
 import Router from 'next/router'
 import { Row, Col, Form, Button } from 'antd'
+import Layout from '../../../components/Common/Layout/Layout'
 import getAxios from '../../../utils/axios'
 import Select, { SelectDropdownStyle } from '../../../components/Common/Forms/Select'
 import Input from '../../../components/Common/Forms/Input'
 import TextArea from '../../../components/Common/Forms/TextArea'
-import withUser from '../../../components/HOC/withUser'
 import CodeEditor from '../../../components/Common/CodeEditor/CodeEditor'
-import Header from '../../../components/Common/Header/Header'
 
 class NewPost extends Component {
   state = {
@@ -60,90 +59,92 @@ class NewPost extends Component {
   render() {
     const {
       form: { getFieldDecorator },
-      user,
     } = this.props
     const { tags, saving, language } = this.state
 
     return (
-      <Form>
-        <SelectDropdownStyle />
-        <Header user={user} />
-        <Row>
-          <Col
-            xs={{ span: 24, offset: 0 }}
-            sm={{ span: 24, offset: 1 }}
-            md={{ span: 20, offset: 2 }}
-            lg={{ span: 16, offset: 4 }}
-            xl={{ span: 16, offset: 4 }}
-          >
-            <h1 style={{ fontSize: '25px', marginTop: '20px' }}>New post</h1>
+      <Layout
+        render={() => (
+          <Form>
+            <SelectDropdownStyle />
             <Row>
-              <Col xs={24} sm={24} md={14} lg={14} xl={14}>
-                <div style={{ height: '386px' }}>
-                  <CodeEditor
-                    language={language}
-                    onChange={this.codeChangeHandler}
-                    onLanguageChange={this.languageChangeHandler}
-                  />
-                </div>
-              </Col>
               <Col
-                xs={24}
-                sm={24}
-                md={{ span: 9, offset: 1 }}
-                lg={{ span: 9, offset: 1 }}
-                xl={{ span: 9, offset: 1 }}
-                style={{ marginTop: '38px' }}
+                xs={{ span: 24, offset: 0 }}
+                sm={{ span: 24, offset: 1 }}
+                md={{ span: 20, offset: 2 }}
+                lg={{ span: 16, offset: 4 }}
+                xl={{ span: 16, offset: 4 }}
               >
-                <Form.Item>
-                  {getFieldDecorator('name', {
-                    rules: [{ required: true, message: 'Please input the post name' }],
-                  })(<Input autoComplete="off" placeholder="Post name..." />)}
-                </Form.Item>
-                <Form.Item>
-                  {getFieldDecorator('tags', {
-                    rules: [{ required: true, message: 'Please input the post name' }],
-                  })(
-                    <Select mode="multiple" placeholder="Tags...">
-                      {tags.map(tag => (
-                        <Select.Option key={tag._id} value={tag.name}>
-                          {tag.name}
-                        </Select.Option>
-                      ))}
-                    </Select>
-                  )}
-                </Form.Item>
-                <Form.Item>
-                  {getFieldDecorator('description', {
-                    rules: [{ required: true, message: 'Please input the description' }],
-                  })(
-                    <TextArea
-                      rows="12"
-                      autoComplete="off"
-                      placeholder="Description of your code..."
-                    />
-                  )}
-                </Form.Item>
-                <Row type="flex" justify="end">
-                  <Col xs={24} sm={24} md={6} lg={6} xl={6}>
-                    <Button
-                      loading={saving}
-                      disabled={saving}
-                      style={{ width: '100%' }}
-                      type="primary"
-                      onClick={this.submitPost}
-                    >
-                      Save
-                    </Button>
+                <h1 style={{ fontSize: '25px', marginTop: '20px' }}>New post</h1>
+                <Row>
+                  <Col xs={24} sm={24} md={14} lg={14} xl={14}>
+                    <div style={{ height: '386px' }}>
+                      <CodeEditor
+                        language={language}
+                        onChange={this.codeChangeHandler}
+                        onLanguageChange={this.languageChangeHandler}
+                      />
+                    </div>
+                  </Col>
+                  <Col
+                    xs={24}
+                    sm={24}
+                    md={{ span: 9, offset: 1 }}
+                    lg={{ span: 9, offset: 1 }}
+                    xl={{ span: 9, offset: 1 }}
+                    style={{ marginTop: '38px' }}
+                  >
+                    <Form.Item>
+                      {getFieldDecorator('name', {
+                        rules: [{ required: true, message: 'Please input the post name' }],
+                      })(<Input autoComplete="off" placeholder="Post name..." />)}
+                    </Form.Item>
+                    <Form.Item>
+                      {getFieldDecorator('tags', {
+                        rules: [{ required: true, message: 'Please input the post name' }],
+                      })(
+                        <Select mode="multiple" placeholder="Tags...">
+                          {tags.map(tag => (
+                            <Select.Option key={tag._id} value={tag.name}>
+                              {tag.name}
+                            </Select.Option>
+                          ))}
+                        </Select>
+                      )}
+                    </Form.Item>
+                    <Form.Item>
+                      {getFieldDecorator('description', {
+                        rules: [{ required: true, message: 'Please input the description' }],
+                      })(
+                        <TextArea
+                          rows="12"
+                          autoComplete="off"
+                          placeholder="Description of your code..."
+                        />
+                      )}
+                    </Form.Item>
+                    <Row type="flex" justify="end">
+                      <Col xs={24} sm={24} md={6} lg={6} xl={6}>
+                        <Button
+                          loading={saving}
+                          disabled={saving}
+                          style={{ width: '100%' }}
+                          type="primary"
+                          onClick={this.submitPost}
+                        >
+                          Save
+                        </Button>
+                      </Col>
+                    </Row>
                   </Col>
                 </Row>
               </Col>
             </Row>
-          </Col>
-        </Row>
-      </Form>
+          </Form>
+        )}
+      />
     )
   }
 }
 
-export default withUser(Form.create()(NewPost))
+export default Form.create()(NewPost)
