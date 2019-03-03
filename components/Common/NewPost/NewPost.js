@@ -21,6 +21,7 @@ class NewPost extends Component {
     language: 'javascript',
     tags: [],
     saving: false,
+    showCodeError: false,
   }
 
   codeChangeHandler = code => {
@@ -28,6 +29,7 @@ class NewPost extends Component {
       codeFiles: prevState.codeFiles.map((file, index) =>
         index === prevState.currentCodeFile ? code : file
       ),
+      showCodeError: false,
     }))
   }
 
@@ -43,8 +45,9 @@ class NewPost extends Component {
   submitPost = () => {
     const { form } = this.props
     const { codeFiles, tags, language } = this.state
+    this.setState({ showCodeError: !codeFiles[0] })
     form.validateFieldsAndScroll(async (err, values) => {
-      if (err) return
+      if (err || !codeFiles[0]) return
       this.setState({ saving: true })
       try {
         const newPost = await getAxios().post('posts', {
@@ -67,7 +70,7 @@ class NewPost extends Component {
     const {
       form: { getFieldDecorator },
     } = this.props
-    const { tags, saving, language } = this.state
+    const { tags, saving, language, showCodeError } = this.state
     return (
       <Container>
         <Form>
@@ -80,6 +83,7 @@ class NewPost extends Component {
                   language={language}
                   onChange={this.codeChangeHandler}
                   onLanguageChange={this.languageChangeHandler}
+                  error={showCodeError ? 'Please provide some code to refactor' : null}
                 />
               </EditorContainer>
             </Col>

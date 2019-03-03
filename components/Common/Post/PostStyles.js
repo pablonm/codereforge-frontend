@@ -25,5 +25,5 @@ export const PostDescription = styled.p`
 
 export const Buttons = styled.div`
   display: flex;
-  justify-content: end;
+  justify-items: end;
 `
