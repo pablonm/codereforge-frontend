@@ -31,14 +31,19 @@ class Comments extends Component {
         </Title>
         {!collapsed && (
           <Fragment>
-            {comments.length > 0 ? (
-              comments.map(comment => <Comment key={comment._id} comment={comment} />)
+            {comments.length > 0 || addedComments.length > 0 ? (
+              <div>
+                {comments.map(comment => (
+                  <Comment key={comment._id} comment={comment} />
+                ))}
+                {addedComments.map(comment => (
+                  <Comment key={comment._id} comment={comment} />
+                ))}
+              </div>
             ) : (
               <NoComments>No comments yet</NoComments>
             )}
-            {addedComments.map(comment => (
-              <Comment key={comment._id} comment={comment} />
-            ))}
+
             <NewComment saving={saving} onSubmit={this.submitPostCommentHandler} />
           </Fragment>
         )}

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Title, NoRefactorings } from './RefactoringsStyles'
 import Refactoring from './Refactoring/Refactoring'
 
-const Refactorings = ({ refactorings, user }) => {
+const Refactorings = ({ refactorings, user, addedRefactorings }) => {
   const sort = refs => {
     return refs.sort((a, b) => {
       if (a.score > b.score) return -1
@@ -19,10 +19,15 @@ const Refactorings = ({ refactorings, user }) => {
   return (
     <div>
       <Title>Refactorings</Title>
-      {refactorings.length > 0 ? (
-        sort(refactorings).map(refactoring => (
-          <Refactoring key={refactoring._id} refactoring={refactoring} user={user} />
-        ))
+      {refactorings.length > 0 || addedRefactorings.length > 0 ? (
+        <div>
+          {sort(refactorings).map(refactoring => (
+            <Refactoring key={refactoring._id} refactoring={refactoring} user={user} />
+          ))}
+          {addedRefactorings.map(refactoring => (
+            <Refactoring key={refactoring._id} refactoring={refactoring} user={user} />
+          ))}
+        </div>
       ) : (
         <NoRefactorings>No refactorings yet</NoRefactorings>
       )}
@@ -37,38 +42,40 @@ const authorShape = PropTypes.shape({
   picture: PropTypes.string,
 })
 
+const refactoringShape = PropTypes.shape({
+  _id: PropTypes.string.isRequired,
+  author: authorShape,
+  description: PropTypes.string.isRequired,
+  code_files: PropTypes.arrayOf(
+    PropTypes.shape({
+      _id: PropTypes.string.isRequired,
+      code: PropTypes.string.isRequired,
+      language: PropTypes.string.isRequired,
+    })
+  ),
+  comments: PropTypes.arrayOf(
+    PropTypes.shape({
+      _id: PropTypes.string,
+      content: PropTypes.string,
+      author: authorShape,
+      parent: PropTypes.string,
+      created_at: PropTypes.string,
+    })
+  ),
+  created_at: PropTypes.string.isRequired,
+})
+
 Refactorings.propTypes = {
   user: PropTypes.shape({
     _id: PropTypes.string.isRequired,
   }),
-  refactorings: PropTypes.arrayOf(
-    PropTypes.shape({
-      _id: PropTypes.string.isRequired,
-      author: authorShape,
-      description: PropTypes.string.isRequired,
-      code_files: PropTypes.arrayOf(
-        PropTypes.shape({
-          _id: PropTypes.string.isRequired,
-          code: PropTypes.string.isRequired,
-          language: PropTypes.string.isRequired,
-        })
-      ),
-      comments: PropTypes.arrayOf(
-        PropTypes.shape({
-          _id: PropTypes.string,
-          content: PropTypes.string,
-          author: authorShape,
-          parent: PropTypes.string,
-          created_at: PropTypes.string,
-        })
-      ),
-      created_at: PropTypes.string.isRequired,
-    })
-  ).isRequired,
+  refactorings: PropTypes.arrayOf(refactoringShape).isRequired,
+  addedRefactorings: PropTypes.arrayOf(refactoringShape),
 }
 
 Refactorings.defaultProps = {
   user: null,
+  addedRefactorings: [],
 }
 
 export default Refactorings

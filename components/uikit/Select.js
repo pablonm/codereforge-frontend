@@ -13,11 +13,12 @@ const Select = styled(AntSelect)`
   }
 
   .ant-select-selection__choice {
-    background-color: #1890ff;
+    background-color: #d358f7;
     border: none;
     border-radius: 2px;
     color: white;
     padding-top: 1px;
+    font-weight: 900;
 
     .ant-select-selection__choice__remove {
       color: white;

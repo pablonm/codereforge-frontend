@@ -6,7 +6,13 @@ import CodeEditor from '../CodeEditor/CodeEditor'
 import Input from '../../uikit/Input'
 import TextArea from '../../uikit/TextArea'
 import Select, { SelectDropdownStyle } from '../../uikit/Select'
-import { Container, FieldsContainer, EditorContainer, ButtonsContainer } from './NewPostStyles'
+import {
+  Container,
+  Title,
+  FieldsContainer,
+  EditorContainer,
+  ButtonsContainer,
+} from './NewPostStyles'
 
 class NewPost extends Component {
   state = {
@@ -66,7 +72,7 @@ class NewPost extends Component {
       <Container>
         <Form>
           <SelectDropdownStyle />
-          <h1>New post</h1>
+          <Title>New post</Title>
           <Row>
             <Col xs={24} sm={24} md={14} lg={14} xl={14}>
               <EditorContainer>

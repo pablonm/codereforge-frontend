@@ -62,6 +62,12 @@ class Refactoring extends Component {
     return refactoring.voters.includes(user._id)
   }
 
+  isAuthor = () => {
+    const { refactoring, user } = this.props
+    if (!user) return false
+    return refactoring.author._id === user._id
+  }
+
   render() {
     const { refactoring, user } = this.props
     const { author, code_files, score, description, comments } = refactoring
@@ -88,7 +94,7 @@ class Refactoring extends Component {
                 type="primary"
                 icon="caret-up"
                 size="small"
-                disabled={voted || this.alreadyVoted() || !user}
+                disabled={voted || this.alreadyVoted() || !user || this.isAuthor()}
                 onClick={() => this.vote(1)}
               >
                 Vote up
@@ -97,13 +103,14 @@ class Refactoring extends Component {
                 type="primary"
                 icon="caret-down"
                 size="small"
-                disabled={voted || this.alreadyVoted() || !user}
+                disabled={voted || this.alreadyVoted() || !user || this.isAuthor()}
                 onClick={() => this.vote(-1)}
               >
                 Vote down
               </Button>
               {voted || (this.alreadyVoted() && <span>You already voted this refactoring</span>)}
               {!user && <span>Login to vote for this refactoring</span>}
+              {this.isAuthor() && <span>You can not vote your own refactoring</span>}
             </Actions>
             <div style={{ marginTop: '20px' }}>
               <Comments

@@ -1,14 +1,17 @@
 import styled from 'styled-components'
 
-const EditorContainer = styled.div`
+export const EditorContainer = styled.div`
   height: 100%;
   .react-codemirror2 {
     height: 100%;
   }
   .CodeMirror {
+    ${({ error }) => error && 'border: 1px solid #f5222d;'}
     height: 100%;
     border-radius: 3px;
   }
 `
 
-export default EditorContainer
+export const ErrorMessage = styled.span`
+  color: #f5222d;
+`

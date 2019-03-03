@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { Row, Col } from 'antd'
 import Select from '../../uikit/Select'
-import EditorContainer from './CodeEditorStyle'
+import { EditorContainer, ErrorMessage } from './CodeEditorStyle'
 
 let CodeMirror
 
@@ -133,22 +133,6 @@ class CodeEditor extends Component {
   state = {
     render: false,
     selectedMode: null,
-  }
-
-  static propTypes = {
-    onChange: PropTypes.func,
-    onLanguageChange: PropTypes.func,
-    code: PropTypes.string,
-    language: PropTypes.string,
-    readonly: PropTypes.bool,
-  }
-
-  static defaultProps = {
-    onChange: null,
-    onLanguageChange: null,
-    code: '// Your code goes here...',
-    language: 'javascript',
-    readonly: false,
   }
 
   componentDidMount = () => {
@@ -292,7 +276,7 @@ class CodeEditor extends Component {
 
   render() {
     const { render, selectedMode } = this.state
-    const { code, readonly } = this.props
+    const { code, readonly, error } = this.props
     const { Option } = Select
     if (!render) return null
     const { UnControlled } = CodeMirror
@@ -319,7 +303,7 @@ class CodeEditor extends Component {
             )}
           </Col>
         </Row>
-        <EditorContainer>
+        <EditorContainer error={!!error}>
           <UnControlled
             value={code}
             options={{
@@ -331,9 +315,28 @@ class CodeEditor extends Component {
             onChange={this.codeChangeHandler}
           />
         </EditorContainer>
+        <ErrorMessage>{error}</ErrorMessage>
       </Fragment>
     )
   }
+}
+
+CodeEditor.propTypes = {
+  onChange: PropTypes.func,
+  onLanguageChange: PropTypes.func,
+  code: PropTypes.string,
+  language: PropTypes.string,
+  readonly: PropTypes.bool,
+  error: PropTypes.string,
+}
+
+CodeEditor.defaultProps = {
+  onChange: null,
+  onLanguageChange: null,
+  code: '// Your code goes here...',
+  language: 'javascript',
+  readonly: false,
+  error: null,
 }
 
 export default CodeEditor

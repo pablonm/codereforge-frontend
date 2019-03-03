@@ -1,6 +1,6 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { Avatar } from 'antd'
+import { Avatar, Button } from 'antd'
 import CodeEditor from '../CodeEditor/CodeEditor'
 import Tag from '../../uikit/Tag'
 import UserInfo from '../../uikit/UserInfo'
@@ -8,12 +8,16 @@ import Comments from '../Comments/Comments'
 import Refactorings from '../Refactorings/Refactorings'
 import { formatComplete } from '../../../utils/dates'
 import getAxios from '../../../utils/axios'
-import { PostTitle, PostDescription, Container } from './PostStyles'
+import { PostContainer, PostTitle, PostDescription, Container, Buttons } from './PostStyles'
+import NewRefactoring from '../NewRefactoring/NewRefactoring'
 
 class Post extends Component {
   state = {
     savingNewPostComment: false,
     addedPostComments: [],
+    addingRefactoring: false,
+    savingRefactoring: false,
+    addedRefactorings: [],
   }
 
   newPostCommentHandler = async comment => {
@@ -31,14 +35,44 @@ class Post extends Component {
     }))
   }
 
+  toggleAddingRefactoring = () => {
+    this.setState(prevState => ({
+      addingRefactoring: !prevState.addingRefactoring,
+    }))
+  }
+
+  submitRefactoringHandler = async refactoring => {
+    const {
+      post: { _id },
+    } = this.props
+    this.setState({ savingRefactoring: true })
+    const newRefactoring = await getAxios().post('/refactorings', {
+      description: refactoring.description,
+      codeFiles: [refactoring.code],
+      language: refactoring.language,
+      postId: _id,
+    })
+    this.setState(prevState => ({
+      savingRefactoring: false,
+      addedRefactorings: [...prevState.addedRefactorings, newRefactoring.data],
+      addingRefactoring: false,
+    }))
+  }
+
   render() {
-    const { savingNewPostComment, addedPostComments } = this.state
+    const {
+      savingNewPostComment,
+      addedPostComments,
+      addingRefactoring,
+      savingRefactoring,
+      addedRefactorings,
+    } = this.state
     const { post, user } = this.props
     const { author, code_files, tags, comments, refactorings } = post
     const file = code_files[0]
 
     return (
-      <Fragment>
+      <PostContainer>
         <Container>
           <UserInfo>
             <Avatar shape="square" src={author.picture} icon="user" />
@@ -63,9 +97,31 @@ class Post extends Component {
           </div>
         </Container>
         <div style={{ marginTop: '20px' }}>
-          <Refactorings refactorings={refactorings} user={user} />
+          <Refactorings
+            refactorings={refactorings}
+            addedRefactorings={addedRefactorings}
+            user={user}
+          />
         </div>
-      </Fragment>
+        {!addingRefactoring ? (
+          <div style={{ marginTop: '20px' }}>
+            {!user && <span>Login to refactor</span>}
+            <Buttons>
+              <Button type="primary" disabled={!user} onClick={this.toggleAddingRefactoring}>
+                Add a refactoring
+              </Button>
+            </Buttons>
+          </div>
+        ) : (
+          <NewRefactoring
+            onSubmit={this.submitRefactoringHandler}
+            code={file.code}
+            language={file.language}
+            saving={savingRefactoring}
+            onCancel={this.toggleAddingRefactoring}
+          />
+        )}
+      </PostContainer>
     )
   }
 }

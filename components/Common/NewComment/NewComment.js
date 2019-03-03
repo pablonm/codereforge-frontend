@@ -13,8 +13,8 @@ const NewComment = ({ onSubmit, form, saving }) => {
     form.validateFieldsAndScroll((err, values) => {
       if (err) return
       onSubmit(values)
+      form.resetFields()
     })
-    form.resetFields()
   }
 
   return (

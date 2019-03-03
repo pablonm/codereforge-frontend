@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { Col } from 'antd'
 
 export const Container = styled.div`
   background-color: #1c1c1c;
@@ -13,17 +12,12 @@ export const Title = styled.h1`
   border-bottom: 1px solid #2e2e2e;
 `
 
-export const EditorContainer = styled.div`
-  height: 386px;
-`
+export const Buttons = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
 
-export const FieldsContainer = styled(Col)`
-  margin-top: 38px;
-  padding-left: 10px;
+  button {
+    margin-left: 10px;
+  }
 `
-
-export const ButtonsContainer = styled(Col)`
-  margin-top: -20px;
-`
-
-export default Container

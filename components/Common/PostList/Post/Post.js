@@ -3,7 +3,8 @@ import Router from 'next/router'
 import PropTypes from 'prop-types'
 import { Row, Col } from 'antd'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { PostContainer, Title, Tags, Tag, PostInfo, PostInfoUnit } from './PostStyles'
+import { PostContainer, Title, Tags, PostInfo, PostInfoUnit } from './PostStyles'
+import Tag from '../../../uikit/Tag'
 
 const Post = ({ post }) => {
   const goToPost = id => {

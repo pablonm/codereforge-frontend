@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { Tag as AntTag } from 'antd'
 
 export const PostContainer = styled.article`
   display: flex;
@@ -24,13 +23,6 @@ export const Title = styled.h2`
 
 export const Tags = styled.div``
 
-export const Tag = styled(AntTag)`
-  background-color: #1890ff;
-  border: none;
-  border-radius: 2px;
-  color: white;
-  padding-top: 1px;
-`
 export const PostInfo = styled.div`
   width: 100%;
   display: flex;
