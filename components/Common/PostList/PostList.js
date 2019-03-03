@@ -1,19 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Post from './Post/Post'
-import { PostList } from './PostsStyles'
 
-const Posts = ({ posts }) => {
+const PostList = ({ posts }) => {
   return (
-    <PostList>
+    <div>
       {posts.map(post => (
         <Post key={post._id} post={post} />
       ))}
-    </PostList>
+    </div>
   )
 }
 
-Posts.propTypes = {
+PostList.propTypes = {
   posts: PropTypes.arrayOf(
     PropTypes.shape({
       comments: PropTypes.arrayOf(PropTypes.string),
@@ -27,14 +26,13 @@ Posts.propTypes = {
       ),
       _id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
-      author: PropTypes.string.isRequired,
       created_at: PropTypes.string.isRequired,
     })
   ),
 }
 
-Posts.defaultProps = {
+PostList.defaultProps = {
   posts: [],
 }
 
-export default Posts
+export default PostList

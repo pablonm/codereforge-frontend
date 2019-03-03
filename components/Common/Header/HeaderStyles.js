@@ -10,6 +10,7 @@ export const Logo = styled.img`
 export const HeaderContainer = styled(Row)`
   background-color: #1c1c1c;
   border-bottom: 1px solid #2e2e2e;
+  margin-bottom: 10px;
 `
 
 export const UserBar = styled(Col)`

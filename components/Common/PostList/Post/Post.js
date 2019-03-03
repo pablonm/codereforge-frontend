@@ -1,14 +1,19 @@
 import React from 'react'
+import Router from 'next/router'
 import PropTypes from 'prop-types'
 import { Row, Col } from 'antd'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { PostContainer, Title, Tags, Tag, PostInfo, PostInfoUnit } from './PostStyles'
 
 const Post = ({ post }) => {
+  const goToPost = id => {
+    Router.push(`/post/${id}`)
+  }
+
   return (
     <Row>
       <Col md={24}>
-        <PostContainer>
+        <PostContainer onClick={() => goToPost(post._id)}>
           <Title>{post.name}</Title>
           <Tags>
             {post.tags.map(tag => (
@@ -54,7 +59,6 @@ Post.propTypes = {
     ),
     _id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
     created_at: PropTypes.string.isRequired,
   }).isRequired,
 }

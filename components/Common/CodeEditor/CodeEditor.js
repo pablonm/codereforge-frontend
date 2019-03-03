@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { Row, Col } from 'antd'
-import Select from '../Forms/Select'
+import Select from '../../uikit/Select'
 import EditorContainer from './CodeEditorStyle'
 
 let CodeMirror
@@ -136,15 +136,19 @@ class CodeEditor extends Component {
   }
 
   static propTypes = {
-    onChange: PropTypes.func.isRequired,
-    onLanguageChange: PropTypes.func.isRequired,
+    onChange: PropTypes.func,
+    onLanguageChange: PropTypes.func,
     code: PropTypes.string,
     language: PropTypes.string,
+    readonly: PropTypes.bool,
   }
 
   static defaultProps = {
+    onChange: null,
+    onLanguageChange: null,
     code: '// Your code goes here...',
     language: 'javascript',
+    readonly: false,
   }
 
   componentDidMount = () => {
@@ -278,17 +282,17 @@ class CodeEditor extends Component {
   languageChangeHandler = language => {
     const { onLanguageChange } = this.props
     this.setState({ selectedMode: language })
-    onLanguageChange(language)
+    if (onLanguageChange) onLanguageChange(language)
   }
 
   codeChangeHandler = (editor, data, value) => {
     const { onChange } = this.props
-    onChange(value)
+    if (onChange) onChange(value)
   }
 
   render() {
     const { render, selectedMode } = this.state
-    const { code } = this.props
+    const { code, readonly } = this.props
     const { Option } = Select
     if (!render) return null
     const { UnControlled } = CodeMirror
@@ -296,27 +300,30 @@ class CodeEditor extends Component {
       <Fragment>
         <Row type="flex" justify="space-between" style={{ marginBottom: '10px' }}>
           <Col md={6} xs={24}>
-            <Select
-              showSearch
-              optionFilterProp="children"
-              onChange={this.languageChangeHandler}
-              value={selectedMode}
-              filterOption={(input, option) =>
-                option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-              }
-            >
-              {modes.map(mod => (
-                <Option key={mod} value={mod}>
-                  {mod}
-                </Option>
-              ))}
-            </Select>
+            {!readonly && (
+              <Select
+                showSearch
+                optionFilterProp="children"
+                onChange={this.languageChangeHandler}
+                value={selectedMode}
+                filterOption={(input, option) =>
+                  option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
+                }
+              >
+                {modes.map(mod => (
+                  <Option key={mod} value={mod}>
+                    {mod}
+                  </Option>
+                ))}
+              </Select>
+            )}
           </Col>
         </Row>
         <EditorContainer>
           <UnControlled
             value={code}
             options={{
+              readOnly: readonly ? 'nocursor' : false,
               mode: selectedMode,
               theme: 'darcula',
               lineNumbers: true,

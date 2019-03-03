@@ -45,7 +45,7 @@ const Header = ({ user }) => {
                 placement="bottomRight"
               >
                 <User>
-                  <Avatar icon="user" />
+                  <Avatar shape="square" icon="user" src={user.picture} />
                 </User>
               </Dropdown>
             </UserBar>

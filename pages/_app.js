@@ -4,7 +4,6 @@ import App, { Container } from 'next/app'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
   faBell,
-  faStar,
   faUserCog,
   faPowerOff,
   faCode,
@@ -16,17 +15,7 @@ import {
   faCommentAlt as faCommentAltReg,
 } from '@fortawesome/free-regular-svg-icons'
 
-library.add(
-  faBell,
-  faStar,
-  faUserCog,
-  faPowerOff,
-  faCode,
-  faMarker,
-  faUser,
-  faFileReg,
-  faCommentAltReg
-)
+library.add(faBell, faUserCog, faPowerOff, faCode, faMarker, faUser, faFileReg, faCommentAltReg)
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {

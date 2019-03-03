@@ -29,7 +29,7 @@ export const storeSession = session => {
 }
 
 export const login = () => {
-  localStorage.setItem('loginRedirection', Router.pathname)
+  localStorage.setItem('loginRedirection', Router.asPath)
   getAuth0().authorize(getOptions())
 }
 export const logout = () => {

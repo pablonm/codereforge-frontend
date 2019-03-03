@@ -33,14 +33,6 @@ const UserMenu = ({ onLogout }) => {
           </div>
         </Link>
       </Menu.Item>
-      <Menu.Item key="user-favorites-menu-item">
-        <Link href="/me/favorites">
-          <div>
-            <FontAwesomeIcon icon="star" />
-            Favorites
-          </div>
-        </Link>
-      </Menu.Item>
       <Menu.Divider />
       <Menu.Item key="user-logout-menu-item" onClick={onLogout}>
         <FontAwesomeIcon icon="power-off" />
