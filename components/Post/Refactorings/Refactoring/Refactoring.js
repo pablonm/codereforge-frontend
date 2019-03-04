@@ -13,8 +13,8 @@ import {
   Description,
   Actions,
 } from './RefactoringStyle'
-import CodeEditor from '../../CodeEditor/CodeEditor'
-import Comments from '../../Comments/Comments'
+import CodeEditor from '../../../Common/CodeEditor/CodeEditor'
+import Comments from '../../../Common/Comments/Comments'
 
 class Refactoring extends Component {
   state = {

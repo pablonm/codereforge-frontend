@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { Title, NoComments } from './CommentsStyles'
 import Comment from './Comment/Comment'
-import NewComment from '../NewComment/NewComment'
+import NewComment from './NewComment/NewComment'
 
 class Comments extends Component {
   state = {

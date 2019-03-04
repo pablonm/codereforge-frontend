@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { Form, Button, Checkbox } from 'antd'
-import Input from '../../../uikit/Input'
+import Input from '../../uikit/Input'
 import { FormItem, Buttons } from './UserProfileEditStyles'
 
 const UserProfileEdit = ({ user, form, form: { getFieldDecorator }, onSave, onCancel, saving }) => {

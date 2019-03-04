@@ -3,7 +3,7 @@ import Link from 'next/link'
 import PropTypes from 'prop-types'
 import { Row, Col, Badge, Avatar, Dropdown } from 'antd'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { login, logout } from '../../../utils/auth0'
+import { login, logout } from '../../../../utils/auth0'
 import { Logo, HeaderContainer, Notifications, UserBar, User, LoginButton } from './HeaderStyles'
 import UserMenu from './UserMenu/UserMenu'
 

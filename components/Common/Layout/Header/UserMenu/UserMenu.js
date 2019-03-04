@@ -17,22 +17,6 @@ const UserMenu = ({ onLogout }) => {
           </div>
         </Link>
       </Menu.Item>
-      <Menu.Item key="user-posts-menu-item">
-        <Link href="/users/me/posts">
-          <div>
-            <FontAwesomeIcon icon="marker" />
-            Posts
-          </div>
-        </Link>
-      </Menu.Item>
-      <Menu.Item key="user-refactorings-menu-item">
-        <Link href="/users/me/refactorings">
-          <div>
-            <FontAwesomeIcon icon="code" />
-            Refactorings
-          </div>
-        </Link>
-      </Menu.Item>
       <Menu.Divider />
       <Menu.Item key="user-logout-menu-item" onClick={onLogout}>
         <FontAwesomeIcon icon="power-off" />

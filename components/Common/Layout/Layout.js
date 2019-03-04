@@ -1,6 +1,6 @@
 import React from 'react'
 import { Row, Col } from 'antd'
-import Header from '../Header/Header'
+import Header from './Header/Header'
 import withUser from '../../hoc/withUser'
 import NewPostWidget from '../NewPostWidget/NewPostWidget'
 

@@ -16,7 +16,11 @@ PostList.propTypes = {
   posts: PropTypes.arrayOf(
     PropTypes.shape({
       comments: PropTypes.arrayOf(PropTypes.string),
-      refactorings: PropTypes.arrayOf(PropTypes.string),
+      refactorings: PropTypes.arrayOf(
+        PropTypes.shape({
+          comments: PropTypes.arrayOf(PropTypes.string),
+        })
+      ),
       code_files: PropTypes.arrayOf(PropTypes.string),
       tags: PropTypes.arrayOf(
         PropTypes.shape({

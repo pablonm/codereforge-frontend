@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Avatar as AntAvatar } from 'antd'
+import { Avatar as AntAvatar, Tabs as AntTabs } from 'antd'
 
 export const Container = styled.div`
   background-color: #1c1c1c;
@@ -52,4 +52,14 @@ export const Buttons = styled.div`
   display: flex;
   justify-content: flex-end;
   margin-top: 20px;
+`
+
+export const Tabs = styled(AntTabs)`
+  .ant-tabs-bar {
+    border-color: #2e2e2e;
+  }
+
+  .ant-tabs-content {
+    border-color: #2e2e2e;
+  }
 `

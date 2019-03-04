@@ -1,5 +1,5 @@
 import React from 'react'
-import UserProfile from '../../../../components/Common/UserProfile/UserProfile'
+import UserProfile from '../../../../components/UserProfile/UserProfile'
 import Layout from '../../../../components/Common/Layout/Layout'
 
 const Home = () => {
