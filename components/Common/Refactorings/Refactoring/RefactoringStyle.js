@@ -22,6 +22,7 @@ export const CollapseIcon = styled.span`
   justify-content: center;
   font-weight: 900;
   color: #096dd9;
+  font-size: 16px;
 `
 
 export const Score = styled.span`

@@ -10,7 +10,7 @@ const UserMenu = ({ onLogout }) => {
     <Menu>
       <UserMenuDropdownStyle />
       <Menu.Item key="user-profile-menu-item">
-        <Link href="/me">
+        <Link href="/users/me">
           <div>
             <FontAwesomeIcon icon="user-cog" />
             Profile
@@ -18,7 +18,7 @@ const UserMenu = ({ onLogout }) => {
         </Link>
       </Menu.Item>
       <Menu.Item key="user-posts-menu-item">
-        <Link href="/me/posts">
+        <Link href="/users/me/posts">
           <div>
             <FontAwesomeIcon icon="marker" />
             Posts
@@ -26,7 +26,7 @@ const UserMenu = ({ onLogout }) => {
         </Link>
       </Menu.Item>
       <Menu.Item key="user-refactorings-menu-item">
-        <Link href="/me/refactorings">
+        <Link href="/users/me/refactorings">
           <div>
             <FontAwesomeIcon icon="code" />
             Refactorings

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { Avatar, Button } from 'antd'
 import CodeEditor from '../CodeEditor/CodeEditor'
@@ -8,7 +8,7 @@ import Comments from '../Comments/Comments'
 import Refactorings from '../Refactorings/Refactorings'
 import { formatComplete } from '../../../utils/dates'
 import getAxios from '../../../utils/axios'
-import { PostContainer, PostTitle, PostDescription, Container, Buttons } from './PostStyles'
+import { PostTitle, PostDescription, Container, Buttons } from './PostStyles'
 import NewRefactoring from '../NewRefactoring/NewRefactoring'
 
 class Post extends Component {
@@ -72,7 +72,7 @@ class Post extends Component {
     const file = code_files[0]
 
     return (
-      <PostContainer>
+      <Fragment>
         <Container>
           <UserInfo>
             <Avatar shape="square" src={author.picture} icon="user" />
@@ -105,7 +105,7 @@ class Post extends Component {
         </div>
         {!addingRefactoring ? (
           <div style={{ marginTop: '20px' }}>
-            {!user && <span>Login to refactor</span>}
+            {!user && <span>Login to add a refactoring</span>}
             <Buttons>
               <Button type="primary" disabled={!user} onClick={this.toggleAddingRefactoring}>
                 Add a refactoring
@@ -121,7 +121,7 @@ class Post extends Component {
             onCancel={this.toggleAddingRefactoring}
           />
         )}
-      </PostContainer>
+      </Fragment>
     )
   }
 }

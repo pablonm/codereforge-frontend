@@ -1,9 +1,5 @@
 import styled from 'styled-components'
 
-export const PostContainer = styled.div`
-  margin-bottom: 50px;
-`
-
 export const Container = styled.div`
   background-color: #1c1c1c;
   padding: 20px;
@@ -25,5 +21,5 @@ export const PostDescription = styled.p`
 
 export const Buttons = styled.div`
   display: flex;
-  justify-items: end;
+  justify-content: flex-end;
 `

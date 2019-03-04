@@ -6,7 +6,7 @@ import NewPostWidget from '../NewPostWidget/NewPostWidget'
 
 const Layout = ({ user, render }) => {
   return (
-    <Row>
+    <Row style={{ marginBottom: '50px' }}>
       <Header user={user} />
       <Col
         xs={{ span: 24, offset: 0 }}

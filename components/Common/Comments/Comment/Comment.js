@@ -10,7 +10,7 @@ const Comment = ({ comment }) => {
   return (
     <CommentContainer>
       <UserInfo>
-        <Avatar shape="square" src={author.picture} />
+        <Avatar shape="square" icon="user" src={author.picture} />
         <div>
           <div>{author.name}</div>
           <span>{formatComplete(created_at)}</span>
