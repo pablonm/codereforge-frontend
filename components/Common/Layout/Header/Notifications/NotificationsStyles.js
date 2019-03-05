@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
 export const NotificationsDropdownStyle = createGlobalStyle`
   .notifications {
@@ -13,4 +13,9 @@ export const NotificationsDropdownStyle = createGlobalStyle`
   }
 `
 
-export default NotificationsDropdownStyle
+export const NoNotifications = styled.div`
+  margin: 10px 0;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.65);
+  text-align: center;
+`

@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { Menu } from 'antd'
-import { NotificationsDropdownStyle } from './NotificationsStyles'
+import { NotificationsDropdownStyle, NoNotifications } from './NotificationsStyles'
 
 const Notifications = ({ notifications }) => {
   const sortedNotifications = () => {
@@ -26,6 +26,7 @@ const Notifications = ({ notifications }) => {
             </Link>
           </Menu.Item>
         ))}
+      {notifications.length === 0 && <NoNotifications>No notifications yet</NoNotifications>}
     </Menu>
   )
 }
