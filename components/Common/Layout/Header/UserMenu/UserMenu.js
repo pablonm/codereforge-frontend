@@ -11,10 +11,10 @@ const UserMenu = ({ onLogout }) => {
       <UserMenuDropdownStyle />
       <Menu.Item key="user-profile-menu-item">
         <Link href="/users/me">
-          <div>
+          <a>
             <FontAwesomeIcon icon="user-cog" />
             Profile
-          </div>
+          </a>
         </Link>
       </Menu.Item>
       <Menu.Divider />

@@ -17,9 +17,23 @@ PostList.propTypes = {
     PropTypes.shape({
       comments: PropTypes.arrayOf(PropTypes.string),
       refactorings: PropTypes.arrayOf(
-        PropTypes.shape({
-          comments: PropTypes.arrayOf(PropTypes.string),
-        })
+        PropTypes.oneOfType([
+          PropTypes.string,
+          PropTypes.shape({
+            post: PropTypes.oneOfType([
+              PropTypes.string,
+              PropTypes.arrayOf(
+                PropTypes.shape({
+                  _id: PropTypes.string.isRequired,
+                  name: PropTypes.string.isRequired,
+                  code_files: PropTypes.arrayOf(PropTypes.string),
+                  comments: PropTypes.arrayOf(PropTypes.string),
+                  refactorings: PropTypes.arrayOf(PropTypes.string),
+                })
+              ),
+            ]),
+          }),
+        ])
       ),
       code_files: PropTypes.arrayOf(PropTypes.string),
       tags: PropTypes.arrayOf(

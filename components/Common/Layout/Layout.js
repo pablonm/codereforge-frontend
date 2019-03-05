@@ -3,6 +3,7 @@ import { Row, Col } from 'antd'
 import Header from './Header/Header'
 import withUser from '../../hoc/withUser'
 import NewPostWidget from '../NewPostWidget/NewPostWidget'
+import LeaderboardWidget from '../LeaderboardWidget/LeaderboardWidget'
 
 const Layout = ({ user, render }) => {
   return (
@@ -20,6 +21,7 @@ const Layout = ({ user, render }) => {
         </Col>
         <Col xs={24} sm={24} md={4} lg={4} xl={4} style={{ paddingLeft: '10px' }}>
           <NewPostWidget isAuthenticated={!!user} />
+          <LeaderboardWidget />
         </Col>
       </Col>
     </Row>

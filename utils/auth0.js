@@ -32,6 +32,7 @@ export const login = () => {
   localStorage.setItem('loginRedirection', Router.asPath)
   getAuth0().authorize(getOptions())
 }
+
 export const logout = () => {
   localStorage.removeItem('idToken')
   localStorage.removeItem('accessToken')

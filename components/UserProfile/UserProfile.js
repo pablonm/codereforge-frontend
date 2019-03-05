@@ -55,7 +55,7 @@ class UserProfile extends Component {
                     <span>
                       <Tooltip title="Score">
                         <FontAwesomeIcon icon="award" />
-                        10
+                        {user.score}
                       </Tooltip>
                     </span>
                   </UserName>
@@ -109,7 +109,14 @@ class UserProfile extends Component {
           <PostList posts={user.posts} />
         </Tabs.TabPane>
         <Tabs.TabPane tab="Refactorings" key="refactorings">
-          <PostList posts={user.refactorings.map(r => r.post)} />
+          <PostList
+            posts={user.refactorings
+              .filter(
+                (refactoring, index, self) =>
+                  index === self.findIndex(r => r.post._id === refactoring.post._id)
+              )
+              .map(r => r.post)}
+          />
         </Tabs.TabPane>
       </Tabs>
     )

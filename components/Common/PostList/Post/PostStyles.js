@@ -27,6 +27,7 @@ export const PostInfo = styled.div`
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  color: white;
 `
 
 export const PostInfoUnit = styled.div`

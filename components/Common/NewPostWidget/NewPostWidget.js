@@ -9,9 +9,11 @@ export const NewPostWidget = ({ isAuthenticated }) => {
       <p>If you have a piece of code that you think it could be improved, create a new post</p>
       {!isAuthenticated && <AuthenticateMessage>Login to create a new post</AuthenticateMessage>}
       <Link href="/post/new">
-        <Button type="primary" disabled={!isAuthenticated}>
-          Create
-        </Button>
+        <a>
+          <Button type="primary" disabled={!isAuthenticated}>
+            Create a post
+          </Button>
+        </a>
       </Link>
     </Card>
   )

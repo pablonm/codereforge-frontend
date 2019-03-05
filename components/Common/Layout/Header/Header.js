@@ -28,7 +28,9 @@ const Header = ({ user }) => {
         <Row type="flex" justify="space-between">
           <Col xs={24} sm={24} md={4} lg={4} xl={4}>
             <Link href="/">
-              <Logo src="/static/img/logo.png" alt="codereforge logo" />
+              <a>
+                <Logo src="/static/img/logo.png" alt="codereforge logo" />
+              </a>
             </Link>
           </Col>
           {user ? (
