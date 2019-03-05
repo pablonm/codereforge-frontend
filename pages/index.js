@@ -1,6 +1,6 @@
 import React from 'react'
-import getAxios from '../utils/axios'
-import Home from '../components/Home/Home'
+import getAxios from 'utils/axios'
+import Home from 'components/Home/Home'
 
 const HomePage = ({ posts, tags }) => {
   return <Home posts={posts} tags={tags} />

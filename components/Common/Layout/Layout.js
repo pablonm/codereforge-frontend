@@ -1,9 +1,9 @@
 import React from 'react'
 import { Row, Col } from 'antd'
+import withUser from 'hoc/withUser'
+import NewPostWidget from 'Common/NewPostWidget/NewPostWidget'
+import LeaderboardWidget from 'Common/LeaderboardWidget/LeaderboardWidget'
 import Header from './Header/Header'
-import withUser from '../../hoc/withUser'
-import NewPostWidget from '../NewPostWidget/NewPostWidget'
-import LeaderboardWidget from '../LeaderboardWidget/LeaderboardWidget'
 
 const Layout = ({ user, render }) => {
   return (

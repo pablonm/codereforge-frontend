@@ -1,7 +1,7 @@
 import React from 'react'
-import getAxios from '../../../utils/axios'
-import UserProfile from '../../../components/UserProfile/UserProfile'
-import Layout from '../../../components/Common/Layout/Layout'
+import getAxios from 'utils/axios'
+import UserProfile from 'components/UserProfile/UserProfile'
+import Layout from 'Common/Layout/Layout'
 
 const UserProfilePage = ({ user }) => {
   return <Layout render={() => user && <UserProfile user={user} />} />

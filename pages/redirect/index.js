@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Row, Col, Spin } from 'antd'
-import getAxios from '../../utils/axios'
-import { parseHash, storeSession } from '../../utils/auth0'
+import getAxios from 'utils/axios'
+import { parseHash, storeSession } from 'utils/auth0'
 
 class Redirect extends Component {
   componentDidMount = () => {

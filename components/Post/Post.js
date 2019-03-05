@@ -1,15 +1,15 @@
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { Avatar, Button } from 'antd'
-import CodeEditor from '../Common/CodeEditor/CodeEditor'
-import Tag from '../uikit/Tag'
-import UserInfo from '../uikit/UserInfo'
-import Comments from '../Common/Comments/Comments'
-import Refactorings from './Refactorings/Refactorings'
-import { formatComplete } from '../../utils/dates'
-import getAxios from '../../utils/axios'
+import CodeEditor from 'Common/CodeEditor/CodeEditor'
+import Tag from 'uikit/Tag'
+import UserInfo from 'uikit/UserInfo'
+import Comments from 'Common/Comments/Comments'
+import { formatComplete } from 'utils/dates'
+import getAxios from 'utils/axios'
 import { PostTitle, PostDescription, Container, Buttons } from './PostStyles'
 import NewRefactoring from './NewRefactoring/NewRefactoring'
+import Refactorings from './Refactorings/Refactorings'
 
 class Post extends Component {
   state = {

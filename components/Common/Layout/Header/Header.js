@@ -3,8 +3,8 @@ import Link from 'next/link'
 import PropTypes from 'prop-types'
 import { Row, Col, Badge, Avatar, Dropdown } from 'antd'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import getAxios from '../../../../utils/axios'
-import { login, logout } from '../../../../utils/auth0'
+import getAxios from 'utils/axios'
+import { login, logout } from 'utils/auth0'
 import {
   Logo,
   HeaderContainer,

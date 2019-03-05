@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Row, Button, Tooltip } from 'antd'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import getAxios from '../../utils/axios'
+import getAxios from 'utils/axios'
+import PostList from 'Common/PostList/PostList'
 import { Container, Avatar, UserName, UserInfo, Buttons, Tabs } from './UserProfileStyles'
 import UserProfileEdit from './UserProfileEdit/UserProfileEdit'
-import PostList from '../Common/PostList/PostList'
 
 class UserProfile extends Component {
   state = {

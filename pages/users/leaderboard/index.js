@@ -1,7 +1,7 @@
 import React from 'react'
-import getAxios from '../../../utils/axios'
-import Layout from '../../../components/Common/Layout/Layout'
-import Leaderboard from '../../../components/Leaderboard/Leaderboard'
+import getAxios from 'utils/axios'
+import Layout from 'Common/Layout/Layout'
+import Leaderboard from 'components/Leaderboard/Leaderboard'
 
 const LeaderboardPage = ({ users }) => {
   return <Layout render={() => <Leaderboard users={users} />} />

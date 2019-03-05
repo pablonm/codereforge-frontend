@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Row, Col, Radio } from 'antd'
-import PostList from '../Common/PostList/PostList'
-import Layout from '../Common/Layout/Layout'
+import PostList from 'Common/PostList/PostList'
+import Layout from 'Common/Layout/Layout'
 import { RadioButton } from './HomeStyles'
 import TagFilter from './TagFilter/TagFilter'
 

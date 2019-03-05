@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { Row, Col } from 'antd'
-import Select from '../../uikit/Select'
+import Select from 'uikit/Select'
 import { EditorContainer, ErrorMessage } from './CodeEditorStyle'
 
 let CodeMirror

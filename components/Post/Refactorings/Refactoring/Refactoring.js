@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Avatar, Button } from 'antd'
-import UserInfo from '../../../uikit/UserInfo'
-import getAxios from '../../../../utils/axios'
-import { formatComplete } from '../../../../utils/dates'
+import UserInfo from 'uikit/UserInfo'
+import getAxios from 'utils/axios'
+import { formatComplete } from 'utils/dates'
+import CodeEditor from 'Common/CodeEditor/CodeEditor'
+import Comments from 'Common/Comments/Comments'
 import {
   Container,
   Header,
@@ -13,8 +15,6 @@ import {
   Description,
   Actions,
 } from './RefactoringStyle'
-import CodeEditor from '../../../Common/CodeEditor/CodeEditor'
-import Comments from '../../../Common/Comments/Comments'
 
 class Refactoring extends Component {
   state = {

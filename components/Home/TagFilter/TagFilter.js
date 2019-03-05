@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Input from '../../uikit/Input'
-import Tag from '../../uikit/Tag'
+import Input from 'uikit/Input'
+import Tag from 'uikit/Tag'
 import { TagContainer, NoAppliedTags, TagFilterContainer } from './TagFilterStyles'
 
 class TagFilter extends Component {

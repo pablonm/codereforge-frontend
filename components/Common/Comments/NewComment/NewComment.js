@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import NoSRR from 'react-no-ssr'
 import { Form, Button } from 'antd'
-import TextArea from '../../../uikit/TextArea'
-import { isAuthenticated } from '../../../../utils/auth0'
+import TextArea from 'uikit/TextArea'
+import { isAuthenticated } from 'utils/auth0'
 import { AuthenticateMessage, Buttons } from './NewCommentStyles'
 
 const NewComment = ({ onSubmit, form, saving }) => {

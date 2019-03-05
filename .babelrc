@@ -19,7 +19,13 @@
     [
       "module-resolver",
       {
-        "root": ["./"]
+        "root": ["./"],
+        "alias": {
+          "hoc": "./components/hoc",
+          "uikit": "./components/uikit",
+          "Common": "./components/Common",
+          "components": "./components"
+        }
       }
     ]
   ]

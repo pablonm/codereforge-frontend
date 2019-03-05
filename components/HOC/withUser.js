@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import getAxios from '../../utils/axios'
-import { isAuthenticated } from '../../utils/auth0'
+import getAxios from 'utils/axios'
+import { isAuthenticated } from 'utils/auth0'
 
 const withUser = WrappedComponent => {
   return class extends Component {

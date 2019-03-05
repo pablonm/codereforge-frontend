@@ -3,8 +3,8 @@ import Link from 'next/link'
 import PropTypes from 'prop-types'
 import { Row, Col } from 'antd'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Tag from 'uikit/Tag'
 import { PostContainer, Title, Tags, PostInfo, PostInfoUnit } from './PostStyles'
-import Tag from '../../../uikit/Tag'
 
 const Post = ({ post }) => {
   return (

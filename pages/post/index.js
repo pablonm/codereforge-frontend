@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { withRouter } from 'next/router'
-import getAxios from '../../utils/axios'
-import Layout from '../../components/Common/Layout/Layout'
-import Post from '../../components/Post/Post'
+import getAxios from 'utils/axios'
+import Layout from 'Common/Layout/Layout'
+import Post from 'components/Post/Post'
 
 class PostPage extends Component {
   static getInitialProps = async ({ query }) => {

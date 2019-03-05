@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Avatar } from 'antd'
+import UserInfo from 'uikit/UserInfo'
+import { formatComplete } from 'utils/dates'
 import { CommentContainer, CommentContent } from './CommentStyles'
-import UserInfo from '../../../uikit/UserInfo'
-import { formatComplete } from '../../../../utils/dates'
 
 const Comment = ({ comment }) => {
   const { author, content, created_at } = comment

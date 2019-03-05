@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Form, Button } from 'antd'
-import TextArea from '../../uikit/TextArea'
-import CodeEditor from '../../Common/CodeEditor/CodeEditor'
+import TextArea from 'uikit/TextArea'
+import CodeEditor from 'Common/CodeEditor/CodeEditor'
 import { Container, Title, Buttons } from './NewRefactoringStyles'
 
 class NewRefactoring extends Component {
