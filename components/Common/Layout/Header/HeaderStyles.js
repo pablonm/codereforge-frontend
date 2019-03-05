@@ -30,7 +30,7 @@ export const UserBarClickable = styled.div`
   }
 `
 
-export const Notifications = styled(UserBarClickable)`
+export const NotificationsIcon = styled(UserBarClickable)`
   .ant-badge {
     margin-top: 17px;
   }

@@ -3,7 +3,7 @@ import { createGlobalStyle } from 'styled-components'
 export const UserMenuDropdownStyle = createGlobalStyle`
   .user-menu {
     .ant-menu {
-      border: none;
+      border: 1px solid #2E2E2E;
     }
     
     .ant-menu-item {
