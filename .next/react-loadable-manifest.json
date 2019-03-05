@@ -357,12 +357,108 @@
       "publicPath": "static/chunks/commons.4d607ad47e6cebcf2011.js"
     }
   ],
-  "../../grid/style/index.less": [
+  "./index.less": [
     {
       "id": "dnqb",
       "name": "./node_modules/antd/lib/grid/style/index.less",
       "file": "static/chunks/commons.4d607ad47e6cebcf2011.js",
       "publicPath": "static/chunks/commons.4d607ad47e6cebcf2011.js"
+    },
+    {
+      "id": "XJbt",
+      "name": "./node_modules/antd/lib/button/style/index.less",
+      "file": "static/chunks/commons.4d607ad47e6cebcf2011.js",
+      "publicPath": "static/chunks/commons.4d607ad47e6cebcf2011.js"
+    },
+    {
+      "id": "a6CB",
+      "name": "./node_modules/antd/lib/tabs/style/index.less",
+      "file": "static/chunks/commons.4d607ad47e6cebcf2011.js",
+      "publicPath": "static/chunks/commons.4d607ad47e6cebcf2011.js"
+    },
+    {
+      "id": "gnA7",
+      "name": "./node_modules/antd/lib/card/style/index.less",
+      "file": "static/chunks/commons.4d607ad47e6cebcf2011.js",
+      "publicPath": "static/chunks/commons.4d607ad47e6cebcf2011.js"
+    },
+    {
+      "id": "GPnO",
+      "name": "./node_modules/antd/lib/dropdown/style/index.less",
+      "file": "static/chunks/commons.4d607ad47e6cebcf2011.js",
+      "publicPath": "static/chunks/commons.4d607ad47e6cebcf2011.js"
+    },
+    {
+      "id": "QqtH",
+      "name": "./node_modules/antd/lib/badge/style/index.less",
+      "file": "static/chunks/commons.4d607ad47e6cebcf2011.js",
+      "publicPath": "static/chunks/commons.4d607ad47e6cebcf2011.js"
+    },
+    {
+      "id": "Svq7",
+      "name": "./node_modules/antd/lib/menu/style/index.less",
+      "file": "static/chunks/commons.4d607ad47e6cebcf2011.js",
+      "publicPath": "static/chunks/commons.4d607ad47e6cebcf2011.js"
+    },
+    {
+      "id": "X6VN",
+      "name": "./node_modules/antd/lib/avatar/style/index.less",
+      "file": "static/chunks/commons.4d607ad47e6cebcf2011.js",
+      "publicPath": "static/chunks/commons.4d607ad47e6cebcf2011.js"
+    },
+    {
+      "id": "hEgN",
+      "name": "./node_modules/antd/lib/tooltip/style/index.less",
+      "file": "static/chunks/commons.4d607ad47e6cebcf2011.js",
+      "publicPath": "static/chunks/commons.4d607ad47e6cebcf2011.js"
+    },
+    {
+      "id": "L/94",
+      "name": "./node_modules/antd/lib/input/style/index.less",
+      "file": "static/chunks/commons.4d607ad47e6cebcf2011.js",
+      "publicPath": "static/chunks/commons.4d607ad47e6cebcf2011.js"
+    },
+    {
+      "id": "Wv/4",
+      "name": "./node_modules/antd/lib/radio/style/index.less",
+      "file": "static/chunks/styles.30dd1e6606595178333b.js",
+      "publicPath": "static/chunks/styles.30dd1e6606595178333b.js"
+    },
+    {
+      "id": "fcTV",
+      "name": "./node_modules/antd/lib/tag/style/index.less",
+      "file": "static/chunks/styles.30dd1e6606595178333b.js",
+      "publicPath": "static/chunks/styles.30dd1e6606595178333b.js"
+    },
+    {
+      "id": "YCql",
+      "name": "./node_modules/antd/lib/select/style/index.less",
+      "file": "static/chunks/styles.30dd1e6606595178333b.js",
+      "publicPath": "static/chunks/styles.30dd1e6606595178333b.js"
+    },
+    {
+      "id": "G3+4",
+      "name": "./node_modules/antd/lib/empty/style/index.less",
+      "file": "static/chunks/styles.30dd1e6606595178333b.js",
+      "publicPath": "static/chunks/styles.30dd1e6606595178333b.js"
+    },
+    {
+      "id": "OBCE",
+      "name": "./node_modules/antd/lib/form/style/index.less",
+      "file": "static/chunks/styles.30dd1e6606595178333b.js",
+      "publicPath": "static/chunks/styles.30dd1e6606595178333b.js"
+    },
+    {
+      "id": "wCKx",
+      "name": "./node_modules/antd/lib/spin/style/index.less",
+      "file": "static/chunks/styles.30dd1e6606595178333b.js",
+      "publicPath": "static/chunks/styles.30dd1e6606595178333b.js"
+    },
+    {
+      "id": "7N94",
+      "name": "./node_modules/antd/lib/checkbox/style/index.less",
+      "file": "static/chunks/styles.30dd1e6606595178333b.js",
+      "publicPath": "static/chunks/styles.30dd1e6606595178333b.js"
     }
   ],
   "./cancel/Cancel": [
@@ -725,104 +821,6 @@
       "name": "./node_modules/antd/lib/date-picker/locale/en_US.js",
       "file": "static/chunks/commons.4d607ad47e6cebcf2011.js",
       "publicPath": "static/chunks/commons.4d607ad47e6cebcf2011.js"
-    }
-  ],
-  "./index.less": [
-    {
-      "id": "XJbt",
-      "name": "./node_modules/antd/lib/button/style/index.less",
-      "file": "static/chunks/commons.4d607ad47e6cebcf2011.js",
-      "publicPath": "static/chunks/commons.4d607ad47e6cebcf2011.js"
-    },
-    {
-      "id": "a6CB",
-      "name": "./node_modules/antd/lib/tabs/style/index.less",
-      "file": "static/chunks/commons.4d607ad47e6cebcf2011.js",
-      "publicPath": "static/chunks/commons.4d607ad47e6cebcf2011.js"
-    },
-    {
-      "id": "gnA7",
-      "name": "./node_modules/antd/lib/card/style/index.less",
-      "file": "static/chunks/commons.4d607ad47e6cebcf2011.js",
-      "publicPath": "static/chunks/commons.4d607ad47e6cebcf2011.js"
-    },
-    {
-      "id": "GPnO",
-      "name": "./node_modules/antd/lib/dropdown/style/index.less",
-      "file": "static/chunks/commons.4d607ad47e6cebcf2011.js",
-      "publicPath": "static/chunks/commons.4d607ad47e6cebcf2011.js"
-    },
-    {
-      "id": "QqtH",
-      "name": "./node_modules/antd/lib/badge/style/index.less",
-      "file": "static/chunks/commons.4d607ad47e6cebcf2011.js",
-      "publicPath": "static/chunks/commons.4d607ad47e6cebcf2011.js"
-    },
-    {
-      "id": "Svq7",
-      "name": "./node_modules/antd/lib/menu/style/index.less",
-      "file": "static/chunks/commons.4d607ad47e6cebcf2011.js",
-      "publicPath": "static/chunks/commons.4d607ad47e6cebcf2011.js"
-    },
-    {
-      "id": "X6VN",
-      "name": "./node_modules/antd/lib/avatar/style/index.less",
-      "file": "static/chunks/commons.4d607ad47e6cebcf2011.js",
-      "publicPath": "static/chunks/commons.4d607ad47e6cebcf2011.js"
-    },
-    {
-      "id": "hEgN",
-      "name": "./node_modules/antd/lib/tooltip/style/index.less",
-      "file": "static/chunks/commons.4d607ad47e6cebcf2011.js",
-      "publicPath": "static/chunks/commons.4d607ad47e6cebcf2011.js"
-    },
-    {
-      "id": "L/94",
-      "name": "./node_modules/antd/lib/input/style/index.less",
-      "file": "static/chunks/commons.4d607ad47e6cebcf2011.js",
-      "publicPath": "static/chunks/commons.4d607ad47e6cebcf2011.js"
-    },
-    {
-      "id": "Wv/4",
-      "name": "./node_modules/antd/lib/radio/style/index.less",
-      "file": "static/chunks/styles.30dd1e6606595178333b.js",
-      "publicPath": "static/chunks/styles.30dd1e6606595178333b.js"
-    },
-    {
-      "id": "fcTV",
-      "name": "./node_modules/antd/lib/tag/style/index.less",
-      "file": "static/chunks/styles.30dd1e6606595178333b.js",
-      "publicPath": "static/chunks/styles.30dd1e6606595178333b.js"
-    },
-    {
-      "id": "YCql",
-      "name": "./node_modules/antd/lib/select/style/index.less",
-      "file": "static/chunks/styles.30dd1e6606595178333b.js",
-      "publicPath": "static/chunks/styles.30dd1e6606595178333b.js"
-    },
-    {
-      "id": "G3+4",
-      "name": "./node_modules/antd/lib/empty/style/index.less",
-      "file": "static/chunks/styles.30dd1e6606595178333b.js",
-      "publicPath": "static/chunks/styles.30dd1e6606595178333b.js"
-    },
-    {
-      "id": "OBCE",
-      "name": "./node_modules/antd/lib/form/style/index.less",
-      "file": "static/chunks/styles.30dd1e6606595178333b.js",
-      "publicPath": "static/chunks/styles.30dd1e6606595178333b.js"
-    },
-    {
-      "id": "wCKx",
-      "name": "./node_modules/antd/lib/spin/style/index.less",
-      "file": "static/chunks/styles.30dd1e6606595178333b.js",
-      "publicPath": "static/chunks/styles.30dd1e6606595178333b.js"
-    },
-    {
-      "id": "7N94",
-      "name": "./node_modules/antd/lib/checkbox/style/index.less",
-      "file": "static/chunks/styles.30dd1e6606595178333b.js",
-      "publicPath": "static/chunks/styles.30dd1e6606595178333b.js"
     }
   ],
   "./col": [
@@ -1693,7 +1691,7 @@
       "publicPath": "static/chunks/commons.4d607ad47e6cebcf2011.js"
     }
   ],
-  "./../process/browser.js": [
+  "./../../process/browser.js": [
     {
       "id": "8oxB",
       "name": "./node_modules/process/browser.js",
