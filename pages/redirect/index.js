@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
+import { Row, Col, Spin } from 'antd'
+import getAxios from '../../utils/axios'
 import { parseHash, storeSession } from '../../utils/auth0'
 
 class Redirect extends Component {
-  componentDidMount() {
+  componentDidMount = () => {
     try {
       parseHash(async (err, result) => {
         if (err) {
@@ -11,6 +13,7 @@ class Redirect extends Component {
           return
         }
         storeSession(result)
+        await getAxios().post('/users', {})
         this.redirect()
       })
     } catch {
@@ -25,7 +28,13 @@ class Redirect extends Component {
   }
 
   render() {
-    return <div>Redirecting...</div>
+    return (
+      <Row type="flex" justify="center">
+        <Col style={{ marginTop: '100px' }}>
+          <Spin size="large" tip="Redirecting..." />
+        </Col>
+      </Row>
+    )
   }
 }
 
