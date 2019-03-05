@@ -9,7 +9,7 @@ export const TagContainer = styled.div`
 `
 
 export const NoAppliedTags = styled.div`
-  margin: 10px 0;
+  margin: 20px 0;
   font-style: italic;
   color: rgba(255, 255, 255, 0.65);
 `

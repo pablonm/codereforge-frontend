@@ -47,7 +47,7 @@ class TagFilter extends Component {
   }
 
   render() {
-    const { selectedTags } = this.state
+    const { selectedTags, filter } = this.state
     return (
       <TagFilterContainer>
         <h3>Applied tags</h3>
@@ -65,13 +65,16 @@ class TagFilter extends Component {
           placeholder="Search..."
           style={{ marginBottom: '10px' }}
         />
-        {this.filterTags().map(tag => (
-          <TagContainer key={`all${tag._id}`}>
-            <Tag clickable="true" onClick={() => this.selectTag(tag)}>
-              {tag.name}
-            </Tag>
-          </TagContainer>
-        ))}
+        {this.filterTags()
+          .slice(0, 25)
+          .map(tag => (
+            <TagContainer key={`all${tag._id}`}>
+              <Tag clickable="true" onClick={() => this.selectTag(tag)}>
+                {tag.name}
+              </Tag>
+            </TagContainer>
+          ))}
+        {!filter && <NoAppliedTags>...{this.filterTags().length - 25} more</NoAppliedTags>}
       </TagFilterContainer>
     )
   }

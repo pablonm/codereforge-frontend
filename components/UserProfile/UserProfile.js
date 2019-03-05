@@ -110,6 +110,7 @@ class UserProfile extends Component {
         </Tabs.TabPane>
         <Tabs.TabPane tab="Refactorings" key="refactorings">
           <PostList
+            noPostsMessage="No refactorings yet"
             posts={user.refactorings
               .filter(
                 (refactoring, index, self) =>

@@ -1,13 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Post from './Post/Post'
+import { NoPostsMessage } from './PostListStyles'
 
-const PostList = ({ posts }) => {
+const PostList = ({ posts, noPostsMessage }) => {
   return (
     <div>
       {posts.map(post => (
         <Post key={post._id} post={post} />
       ))}
+      {posts.length === 0 && <NoPostsMessage>{noPostsMessage}</NoPostsMessage>}
     </div>
   )
 }
@@ -47,10 +49,12 @@ PostList.propTypes = {
       created_at: PropTypes.string.isRequired,
     })
   ),
+  noPostsMessage: PropTypes.string,
 }
 
 PostList.defaultProps = {
   posts: [],
+  noPostsMessage: 'No posts yet',
 }
 
 export default PostList
