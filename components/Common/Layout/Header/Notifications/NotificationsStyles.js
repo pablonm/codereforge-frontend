@@ -18,4 +18,5 @@ export const NoNotifications = styled.div`
   font-style: italic;
   color: rgba(255, 255, 255, 0.65);
   text-align: center;
+  padding: 20px;
 `
