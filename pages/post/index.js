@@ -13,7 +13,13 @@ class PostPage extends Component {
 
   render() {
     const { post } = this.props
-    return <Layout render={user => <Post post={post} user={user} />} />
+    return (
+      <Layout
+        title={post.name}
+        description={post.description}
+        render={user => <Post post={post} user={user} />}
+      />
+    )
   }
 }
 

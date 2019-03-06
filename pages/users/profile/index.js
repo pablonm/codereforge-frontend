@@ -4,7 +4,13 @@ import UserProfile from 'components/UserProfile/UserProfile'
 import Layout from 'Common/Layout/Layout'
 
 const UserProfilePage = ({ user }) => {
-  return <Layout render={() => user && <UserProfile user={user} />} />
+  return (
+    <Layout
+      title={`${user.name} profile`}
+      description={`${user.name} ${user.profession}`}
+      render={() => user && <UserProfile user={user} />}
+    />
+  )
 }
 
 UserProfilePage.getInitialProps = async ({ query }) => {

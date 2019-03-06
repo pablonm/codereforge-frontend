@@ -4,7 +4,13 @@ import Layout from 'Common/Layout/Layout'
 import Leaderboard from 'components/Leaderboard/Leaderboard'
 
 const LeaderboardPage = ({ users }) => {
-  return <Layout render={() => <Leaderboard users={users} />} />
+  return (
+    <Layout
+      title="Users leaderboard"
+      description="These are the users with the highest score in the platform"
+      render={() => <Leaderboard users={users} />}
+    />
+  )
 }
 
 LeaderboardPage.getInitialProps = async () => {

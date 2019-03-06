@@ -72,6 +72,7 @@ class Home extends Component {
     const { tags } = this.props
     return (
       <Layout
+        description="CodeReforge is a platform where users can post code and others refactorize it so everyone improves at coding"
         render={() => (
           <Row>
             <Col xs={24} sm={24} md={4} lg={4} xl={4} style={{ marginTop: '40px' }}>
