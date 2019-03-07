@@ -8,7 +8,7 @@ export const LeaderboardWidget = () => {
       <p>Writing refactorings and receiving votes gets you up in the leaderboard</p>
       <Link href="/users/leaderboard">
         <a>
-          <Button type="primary">Check the leaderboard</Button>
+          <Button type="primary">Check</Button>
         </a>
       </Link>
     </Card>

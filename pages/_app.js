@@ -1,7 +1,7 @@
 import React from 'react'
 import App, { Container } from 'next/app'
-
-import { library } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+import { library, config } from '@fortawesome/fontawesome-svg-core'
 import {
   faBell,
   faUserCog,
@@ -17,6 +17,8 @@ import {
   faCommentAlt as faCommentAltReg,
 } from '@fortawesome/free-regular-svg-icons'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+
+config.autoAddCss = false
 
 library.add(
   faBell,

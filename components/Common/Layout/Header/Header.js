@@ -44,10 +44,10 @@ class Header extends Component {
       <HeaderContainer>
         <Col
           xs={{ span: 24, offset: 0 }}
-          sm={{ span: 22, offset: 1 }}
-          md={{ span: 20, offset: 2 }}
-          lg={{ span: 16, offset: 4 }}
-          xl={{ span: 16, offset: 4 }}
+          sm={{ span: 24, offset: 1 }}
+          md={{ span: 22, offset: 1 }}
+          lg={{ span: 22, offset: 1 }}
+          xl={{ span: 18, offset: 3 }}
         >
           <Row type="flex" justify="space-between">
             <Col xs={24} sm={24} md={4} lg={4} xl={4}>

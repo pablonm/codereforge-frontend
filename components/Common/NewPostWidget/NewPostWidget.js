@@ -11,7 +11,7 @@ export const NewPostWidget = ({ isAuthenticated }) => {
       <Link href="/post/new">
         <a>
           <Button type="primary" disabled={!isAuthenticated}>
-            Create a post
+            Create
           </Button>
         </a>
       </Link>
