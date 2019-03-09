@@ -179,12 +179,6 @@
       "publicPath": "static/chunks/styles.f28152e0a4a0c3469f5d.js"
     },
     {
-      "id": "dnqb",
-      "name": "./node_modules/antd/lib/grid/style/index.less",
-      "file": "static/chunks/commons.1c24f93213978f377b88.js",
-      "publicPath": "static/chunks/commons.1c24f93213978f377b88.js"
-    },
-    {
       "id": "XJbt",
       "name": "./node_modules/antd/lib/button/style/index.less",
       "file": "static/chunks/commons.1c24f93213978f377b88.js",
@@ -609,6 +603,14 @@
     {
       "id": "d04V",
       "name": "./node_modules/@babel/runtime-corejs2/core-js/array/from.js",
+      "file": "static/chunks/commons.1c24f93213978f377b88.js",
+      "publicPath": "static/chunks/commons.1c24f93213978f377b88.js"
+    }
+  ],
+  "../../grid/style/index.less": [
+    {
+      "id": "dnqb",
+      "name": "./node_modules/antd/lib/grid/style/index.less",
       "file": "static/chunks/commons.1c24f93213978f377b88.js",
       "publicPath": "static/chunks/commons.1c24f93213978f377b88.js"
     }
@@ -1419,7 +1421,7 @@
       "publicPath": "static/chunks/commons.1c24f93213978f377b88.js"
     }
   ],
-  "antd/lib/tabs": [
+  "../tabs": [
     {
       "id": "j7zX",
       "name": "./node_modules/antd/lib/tabs/index.js",
@@ -3303,7 +3305,7 @@
       "publicPath": "static/chunks/commons.1c24f93213978f377b88.js"
     }
   ],
-  "../../../components/Common/Layout/Layout": [
+  "../../components/Common/Layout/Layout": [
     {
       "id": "uOj5",
       "name": "./components/Common/Layout/Layout.js",
