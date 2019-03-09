@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
+import dynamic from 'next/dynamic'
 import Router from 'next/router'
 import { Row, Col, Form, Button } from 'antd'
 import getAxios from 'utils/axios'
-import CodeEditor from 'Common/CodeEditor/CodeEditor'
+// import CodeEditor from 'Common/CodeEditor/CodeEditor'
 import Input from 'uikit/Input'
 import TextArea from 'uikit/TextArea'
 import Select, { SelectDropdownStyle } from 'uikit/Select'
@@ -13,6 +14,10 @@ import {
   EditorContainer,
   ButtonsContainer,
 } from './NewPostStyles'
+
+const CodeEditor = dynamic(() => import('Common/CodeEditor/CodeEditor'), {
+  ssr: false,
+})
 
 class NewPost extends Component {
   state = {

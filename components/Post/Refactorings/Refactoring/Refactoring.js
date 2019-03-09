@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+import dynamic from 'next/dynamic'
 import PropTypes from 'prop-types'
 import { Avatar, Button } from 'antd'
 import UserInfo from 'uikit/UserInfo'
 import getAxios from 'utils/axios'
 import { formatComplete } from 'utils/dates'
-import CodeEditor from 'Common/CodeEditor/CodeEditor'
+// import CodeEditor from 'Common/CodeEditor/CodeEditor'
 import Comments from 'Common/Comments/Comments'
 import {
   Container,
@@ -15,6 +16,10 @@ import {
   Description,
   Actions,
 } from './RefactoringStyle'
+
+const CodeEditor = dynamic(() => import('Common/CodeEditor/CodeEditor'), {
+  ssr: false,
+})
 
 class Refactoring extends Component {
   state = {

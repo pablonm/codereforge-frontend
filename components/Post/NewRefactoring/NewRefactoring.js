@@ -1,9 +1,14 @@
 import React, { Component } from 'react'
+import dynamic from 'next/dynamic'
 import PropTypes from 'prop-types'
 import { Form, Button } from 'antd'
 import TextArea from 'uikit/TextArea'
-import CodeEditor from 'Common/CodeEditor/CodeEditor'
+// import CodeEditor from 'Common/CodeEditor/CodeEditor'
 import { Container, Title, Buttons } from './NewRefactoringStyles'
+
+const CodeEditor = dynamic(() => import('Common/CodeEditor/CodeEditor'), {
+  ssr: false,
+})
 
 class NewRefactoring extends Component {
   state = {
