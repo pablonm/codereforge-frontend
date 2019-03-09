@@ -58,7 +58,7 @@ class Header extends Component {
                 </a>
               </Link>
             </Col>
-            <Slogan xs={24} sm={24} md={18} lg={18} xl={18}>
+            <Slogan xs={24} sm={24} md={16} lg={16} xl={16}>
               <span>The code refactoring platform</span>
             </Slogan>
             {user ? (
@@ -88,10 +88,12 @@ class Header extends Component {
                 </Dropdown>
               </UserBar>
             ) : (
-              <LoginButton onClick={this.loginHandler}>
-                <FontAwesomeIcon icon="user" />
-                Login
-              </LoginButton>
+              <Col xs={24} sm={24} md={4} lg={4} xl={4} style={{ textAlign: 'right' }}>
+                <LoginButton onClick={this.loginHandler}>
+                  <FontAwesomeIcon icon="user" />
+                  Login
+                </LoginButton>
+              </Col>
             )}
           </Row>
         </Col>

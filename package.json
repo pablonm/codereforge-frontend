@@ -54,7 +54,8 @@
     "build": "rm -rf .next/ && next build",
     "start": "NODE_ENV=production node ./server/server.js",
     "wstart": "SET NODE_ENV=production && node ./server/server.js",
-    "lint": "eslint --ext .js,.jsx ."
+    "lint": "eslint --ext .js,.jsx .",
+    "deploy": "ssh root@157.230.227.139 sudo bash /home/codereforge-frontend/deploy"
   },
   "husky": {
     "hooks": {
