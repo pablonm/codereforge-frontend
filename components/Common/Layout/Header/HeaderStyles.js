@@ -13,6 +13,19 @@ export const HeaderContainer = styled(Row)`
   margin-bottom: 10px;
 `
 
+export const Slogan = styled(Col)`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  span {
+    margin-left: 15px;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.65);
+    font-style: italic;
+  }
+`
+
 export const UserBar = styled(Col)`
   display: flex;
   justify-content: flex-end;

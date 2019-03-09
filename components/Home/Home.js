@@ -72,6 +72,7 @@ class Home extends Component {
     const { tags } = this.props
     return (
       <Layout
+        title="CodeReforge: The code refactoring platform"
         description="CodeReforge is a platform where users can post code and others refactorize it so everyone improves at coding"
         render={() => (
           <Row>

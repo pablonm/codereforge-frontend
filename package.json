@@ -51,7 +51,7 @@
   },
   "scripts": {
     "dev": "nodemon ./server/server.js",
-    "build": "next build",
+    "build": "rm -rf .next/ && next build",
     "start": "NODE_ENV=production node ./server/server.js",
     "wstart": "SET NODE_ENV=production && node ./server/server.js",
     "lint": "eslint --ext .js,.jsx ."

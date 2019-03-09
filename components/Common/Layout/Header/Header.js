@@ -12,6 +12,7 @@ import {
   UserBar,
   User,
   LoginButton,
+  Slogan,
 } from './HeaderStyles'
 import UserMenu from './UserMenu/UserMenu'
 import Notifications from './Notifications/Notifications'
@@ -49,7 +50,7 @@ class Header extends Component {
           lg={{ span: 22, offset: 1 }}
           xl={{ span: 18, offset: 3 }}
         >
-          <Row type="flex" justify="space-between">
+          <Row type="flex">
             <Col xs={24} sm={24} md={4} lg={4} xl={4}>
               <Link href="/">
                 <a>
@@ -57,6 +58,9 @@ class Header extends Component {
                 </a>
               </Link>
             </Col>
+            <Slogan xs={24} sm={24} md={18} lg={18} xl={18}>
+              <span>The code refactoring platform</span>
+            </Slogan>
             {user ? (
               <UserBar xs={24} sm={24} md={4} lg={4} xl={4}>
                 <Dropdown
