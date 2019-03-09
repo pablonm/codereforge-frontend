@@ -10,7 +10,7 @@ const Post = ({ post }) => {
   return (
     <Row>
       <Col md={24}>
-        <Link href={`post/${post._id}`}>
+        <Link href={`/post/${post._id}`}>
           <a>
             <PostContainer>
               <Title>{post.name}</Title>
