@@ -5,7 +5,6 @@ import { Avatar, Button } from 'antd'
 import UserInfo from 'uikit/UserInfo'
 import getAxios from 'utils/axios'
 import { formatComplete } from 'utils/dates'
-// import CodeEditor from 'Common/CodeEditor/CodeEditor'
 import Comments from 'Common/Comments/Comments'
 import {
   Container,
