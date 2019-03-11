@@ -1593,7 +1593,7 @@
       "publicPath": "static/chunks/commons.d018a7fd6388c856c08a.js"
     }
   ],
-  "../../utils/axios": [
+  "../utils/axios": [
     {
       "id": "1no/",
       "name": "./utils/axios.js",
@@ -1777,7 +1777,7 @@
       "publicPath": "static/chunks/commons.d018a7fd6388c856c08a.js"
     }
   ],
-  "./../process/browser.js": [
+  "./../../process/browser.js": [
     {
       "id": "8oxB",
       "name": "./node_modules/process/browser.js",
