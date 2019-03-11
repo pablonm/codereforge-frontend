@@ -4,6 +4,9 @@ import { Row, Col } from 'antd'
 import Select from 'uikit/Select'
 import { EditorContainer, ErrorMessage } from './CodeEditorStyle'
 
+require('codemirror/lib/codemirror.css')
+require('codemirror/theme/darcula.css')
+
 let CodeMirror
 
 const modes = [
@@ -257,8 +260,6 @@ class CodeEditor extends Component {
     require('codemirror/mode/yaml/yaml')
     require('codemirror/mode/yaml-frontmatter/yaml-frontmatter')
     require('codemirror/mode/z80/z80')
-    require('codemirror/theme/darcula.css')
-    require('codemirror/lib/codemirror.css')
     const { language } = this.props
     this.setState({ render: true, selectedMode: language })
   }
