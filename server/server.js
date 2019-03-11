@@ -7,8 +7,7 @@ const getRobots = require('./robots')
 
 dotenv.load()
 const PORT = parseInt(process.env.PORT, 10) || 3000
-// const app = next({ dev: process.env.NODE_ENV !== 'production' })
-const app = next({ dev: true })
+const app = next({ dev: process.env.NODE_ENV !== 'production' })
 const handler = routes.getRequestHandler(app)
 
 app.prepare().then(() => {
