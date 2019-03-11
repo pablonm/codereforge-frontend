@@ -605,7 +605,7 @@
       "publicPath": "static/chunks/commons.d018a7fd6388c856c08a.js"
     }
   ],
-  "../../core-js/array/from": [
+  "@babel/runtime-corejs2/core-js/array/from": [
     {
       "id": "d04V",
       "name": "./node_modules/@babel/runtime-corejs2/core-js/array/from.js",
@@ -1593,7 +1593,7 @@
       "publicPath": "static/chunks/commons.d018a7fd6388c856c08a.js"
     }
   ],
-  "../../utils/axios": [
+  "../utils/axios": [
     {
       "id": "1no/",
       "name": "./utils/axios.js",
@@ -1777,7 +1777,7 @@
       "publicPath": "static/chunks/commons.d018a7fd6388c856c08a.js"
     }
   ],
-  "./../process/browser.js": [
+  "./../../process/browser.js": [
     {
       "id": "8oxB",
       "name": "./node_modules/process/browser.js",
@@ -2615,7 +2615,7 @@
       "publicPath": "static/chunks/commons.d018a7fd6388c856c08a.js"
     }
   ],
-  "../modules/_core": [
+  "../../modules/_core": [
     {
       "id": "WEpk",
       "name": "./node_modules/core-js/library/modules/_core.js",
@@ -3455,7 +3455,7 @@
       "publicPath": "static/chunks/commons.d018a7fd6388c856c08a.js"
     }
   ],
-  "./../../webpack/buildin/global.js": [
+  "./../webpack/buildin/global.js": [
     {
       "id": "yLpj",
       "name": "./node_modules/webpack/buildin/global.js",
@@ -3991,7 +3991,7 @@
       "publicPath": "static/chunks/3.cf49dcb13e400fee8871.js"
     }
   ],
-  "codemirror/mode/sass/sass": [
+  "../sass/sass": [
     {
       "id": "G2Pi",
       "name": "./node_modules/codemirror/mode/sass/sass.js",
@@ -4741,7 +4741,7 @@
       "publicPath": "static/chunks/14.8c5de90fb5f8a3f44e6e.js"
     }
   ],
-  "codemirror/mode/stylus/stylus": [
+  "../stylus/stylus": [
     {
       "id": "dtKC",
       "name": "./node_modules/codemirror/mode/stylus/stylus.js",
