@@ -32,7 +32,7 @@
       }
     ]
   },
-  "plugins": ["prettier"],
+  "plugins": ["prettier", "html"],
   "env": {
     "jest": true,
     "browser": true

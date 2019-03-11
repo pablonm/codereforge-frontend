@@ -21,6 +21,19 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i"
             rel="stylesheet"
           />
+          <meta name="viewport" />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: `{
+  "@context": "http://www.schema.org",
+  "@type": "WebSite",
+  "name": "CodeReforge",
+  "alternateName": "Code Reforge",
+  "url": "https://codereforge.com"
+}`,
+            }}
+          />
           {this.props.styleTags}
         </Head>
         <body style={{ backgroundColor: 'black', color: 'white' }}>
