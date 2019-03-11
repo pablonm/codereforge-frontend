@@ -1,9 +1,12 @@
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
+import * as CodeMirror from 'react-codemirror2'
 import { Row, Col } from 'antd'
 import Select from 'uikit/Select'
 import { EditorContainer, ErrorMessage } from './CodeEditorStyle'
 
+import 'codemirror/lib/codemirror.css'
+import 'codemirror/theme/darcula.css'
 import 'codemirror/mode/apl/apl'
 import 'codemirror/mode/asciiarmor/asciiarmor'
 import 'codemirror/mode/asn.1/asn.1'
@@ -124,11 +127,6 @@ import 'codemirror/mode/yacas/yacas'
 import 'codemirror/mode/yaml/yaml'
 import 'codemirror/mode/yaml-frontmatter/yaml-frontmatter'
 import 'codemirror/mode/z80/z80'
-import 'codemirror/lib/codemirror.css'
-import 'codemirror/theme/darcula.css'
-
-// eslint-disable-next-line import/order
-import * as CodeMirror from 'react-codemirror2'
 
 const modes = [
   'apl',
@@ -305,6 +303,9 @@ class CodeEditor extends Component {
         <EditorContainer error={!!error}>
           <UnControlled
             value={code}
+            editorDidMount={editor => {
+              editor.refresh()
+            }}
             options={{
               readOnly: readonly ? 'nocursor' : false,
               mode: selectedMode,
