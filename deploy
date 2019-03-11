@@ -2,5 +2,6 @@
 
 cd /home/codereforge-frontend
 git checkout master 
+git reset master --hard
 git pull
 pm2 restart Front

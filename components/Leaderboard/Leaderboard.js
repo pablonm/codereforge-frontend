@@ -8,7 +8,7 @@ const Leaderboard = ({ users }) => {
   const sortByScore = usersArr => {
     return usersArr.sort((a, b) => {
       if (a.score > b.score) return -1
-      if (a.score < b.core) return 1
+      if (a.score < b.score) return 1
       const aDate = new Date(a.created_at)
       const bDate = new Date(b.created_at)
       if (aDate.getTime() < bDate.getTime()) return -1

@@ -2,21 +2,6 @@
   "presets": ["next/babel"],
   "plugins": [
     [
-      "import",
-      {
-        "libraryName": "antd",
-        "style": true
-      }
-    ],
-    [
-      "styled-components",
-      {
-        "ssr": true,
-        "displayName": true,
-        "preprocess": false
-      }
-    ],
-    [
       "module-resolver",
       {
         "root": ["./"],
@@ -26,6 +11,21 @@
           "Common": "./components/Common",
           "components": "./components"
         }
+      }
+    ],
+    [
+      "styled-components",
+      {
+        "ssr": true,
+        "displayName": true,
+        "preprocess": true
+      }
+    ],
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "style": true
       }
     ]
   ]
