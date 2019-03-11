@@ -605,7 +605,7 @@
       "publicPath": "static/chunks/commons.d018a7fd6388c856c08a.js"
     }
   ],
-  "@babel/runtime-corejs2/core-js/array/from": [
+  "../../core-js/array/from": [
     {
       "id": "d04V",
       "name": "./node_modules/@babel/runtime-corejs2/core-js/array/from.js",
@@ -1593,7 +1593,7 @@
       "publicPath": "static/chunks/commons.d018a7fd6388c856c08a.js"
     }
   ],
-  "../utils/axios": [
+  "../../utils/axios": [
     {
       "id": "1no/",
       "name": "./utils/axios.js",
@@ -3303,7 +3303,7 @@
       "publicPath": "static/chunks/commons.d018a7fd6388c856c08a.js"
     }
   ],
-  "../../../components/Common/Layout/Layout": [
+  "../../components/Common/Layout/Layout": [
     {
       "id": "uOj5",
       "name": "./components/Common/Layout/Layout.js",
@@ -3455,7 +3455,7 @@
       "publicPath": "static/chunks/commons.d018a7fd6388c856c08a.js"
     }
   ],
-  "./../webpack/buildin/global.js": [
+  "./../../webpack/buildin/global.js": [
     {
       "id": "yLpj",
       "name": "./node_modules/webpack/buildin/global.js",
@@ -3991,7 +3991,7 @@
       "publicPath": "static/chunks/3.cf49dcb13e400fee8871.js"
     }
   ],
-  "../sass/sass": [
+  "codemirror/mode/sass/sass": [
     {
       "id": "G2Pi",
       "name": "./node_modules/codemirror/mode/sass/sass.js",
@@ -4741,7 +4741,7 @@
       "publicPath": "static/chunks/14.8c5de90fb5f8a3f44e6e.js"
     }
   ],
-  "../stylus/stylus": [
+  "codemirror/mode/stylus/stylus": [
     {
       "id": "dtKC",
       "name": "./node_modules/codemirror/mode/stylus/stylus.js",

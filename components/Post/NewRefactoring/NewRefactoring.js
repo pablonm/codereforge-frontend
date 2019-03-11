@@ -51,7 +51,7 @@ class NewRefactoring extends Component {
       <Container>
         <Title>New Refactoring</Title>
         <CodeEditor
-          error={showCodeError ? 'Please provide a refactorized code' : null}
+          error={showCodeError ? 'Please provide a refactored code' : null}
           code={code}
           language={language}
           onChange={this.codeChangeHandler}

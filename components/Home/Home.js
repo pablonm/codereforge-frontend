@@ -43,7 +43,7 @@ class Home extends Component {
           if (aDate.getTime() < bDate.getTime()) return 1
           return 0
         })
-      case 'notrefactorized':
+      case 'notrefactored':
         return [...filteredPosts].sort((a, b) => {
           if (a.refactorings.length > b.refactorings.length) return 1
           if (a.refactorings.length < b.refactorings.length) return -1
@@ -87,7 +87,7 @@ class Home extends Component {
                   onChange={this.filterChangeHandler}
                 >
                   <RadioButton value="new">New</RadioButton>
-                  <RadioButton value="notrefactorized">Not refactorized</RadioButton>
+                  <RadioButton value="notrefactored">Not refactored</RadioButton>
                   <RadioButton value="popular">Popular</RadioButton>
                 </Radio.Group>
               </TopFilters>
