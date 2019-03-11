@@ -16,6 +16,7 @@
     "import/no-unresolved": "off",
     "no-underscore-dangle": 0,
     "jsx-a11y/anchor-is-valid": 0,
+    "react/no-danger": 0,
     "react/jsx-filename-extension": [
       1,
       {
