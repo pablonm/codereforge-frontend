@@ -8,6 +8,7 @@ export const Tag = styled(AntTag)`
   color: white;
   padding-top: 1px;
   font-weight: 900;
+  margin: 0 5px 5px 5px;
 
   ${props => !props.clickable && 'cursor: default;'}
 

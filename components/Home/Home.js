@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Row, Col, Radio } from 'antd'
 import PostList from 'Common/PostList/PostList'
 import Layout from 'Common/Layout/Layout'
-import { RadioButton } from './HomeStyles'
+import { RadioButton, Tags, TopFilters } from './HomeStyles'
 import TagFilter from './TagFilter/TagFilter'
 
 class Home extends Component {
@@ -76,11 +76,11 @@ class Home extends Component {
         description="CodeReforge is a platform where users can post code and others refactorize it so everyone improves at coding"
         render={() => (
           <Row>
-            <Col xs={24} sm={24} md={4} lg={4} xl={4} style={{ marginTop: '40px' }}>
+            <Tags xs={24} sm={24} md={4} lg={4} xl={4}>
               <TagFilter tags={tags} onFilterChange={this.tagsFilterChangeHandler} />
-            </Col>
+            </Tags>
             <Col xs={24} sm={24} md={20} lg={20} xl={20}>
-              <div style={{ marginBottom: '10px' }}>
+              <TopFilters>
                 <Radio.Group
                   defaultValue="new"
                   buttonStyle="solid"
@@ -90,7 +90,7 @@ class Home extends Component {
                   <RadioButton value="notrefactorized">Not refactorized</RadioButton>
                   <RadioButton value="popular">Popular</RadioButton>
                 </Radio.Group>
-              </div>
+              </TopFilters>
               <PostList posts={this.filterAndSortPosts()} />
             </Col>
           </Row>

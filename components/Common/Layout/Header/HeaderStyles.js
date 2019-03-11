@@ -11,16 +11,24 @@ export const HeaderContainer = styled(Row)`
   background-color: #1c1c1c;
   border-bottom: 1px solid #2e2e2e;
   margin-bottom: 10px;
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `
 
-export const Slogan = styled(Col)`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+export const Slogan = styled.div`
+  position: absolute;
+  top: 20px;
+  left: 270px;
+
+  @media (max-width: 768px) {
+    position: relative;
+    top: auto;
+    left: auto;
+  }
 
   span {
-    margin-left: 15px;
-    margin-bottom: 10px;
     color: rgba(255, 255, 255, 0.65);
     font-style: italic;
   }
@@ -48,6 +56,10 @@ export const NotificationsIcon = styled(UserBarClickable)`
     margin-top: 17px;
   }
 
+  @media (max-width: 768px) {
+    margin-bottom: 10px;
+  }
+
   svg {
     font-size: 20px;
   }
@@ -62,6 +74,11 @@ export const User = styled(UserBarClickable)`
 export const LoginButton = styled(Button)`
   background-color: transparent !important;
   margin-top: 8px;
+
+  @media (max-width: 768px) {
+    width: calc(100% - 20px);
+    margin: 10px;
+  }
 
   svg {
     margin-right: 10px;

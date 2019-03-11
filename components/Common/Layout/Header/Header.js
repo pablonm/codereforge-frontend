@@ -51,16 +51,16 @@ class Header extends Component {
           xl={{ span: 18, offset: 3 }}
         >
           <Row type="flex">
-            <Col xs={24} sm={24} md={4} lg={4} xl={4}>
+            <Col xs={24} sm={24} md={20} lg={20} xl={20}>
               <Link href="/">
                 <a>
                   <Logo src="/static/img/logo.png" alt="codereforge logo" />
                 </a>
               </Link>
+              <Slogan>
+                <span>The code refactoring platform</span>
+              </Slogan>
             </Col>
-            <Slogan xs={24} sm={24} md={16} lg={16} xl={16}>
-              <span>The code refactoring platform</span>
-            </Slogan>
             {user ? (
               <UserBar xs={24} sm={24} md={4} lg={4} xl={4}>
                 <Dropdown

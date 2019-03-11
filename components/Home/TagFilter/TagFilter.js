@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Input from 'uikit/Input'
 import Tag from 'uikit/Tag'
-import { TagContainer, NoAppliedTags, TagFilterContainer } from './TagFilterStyles'
+import { TagContainer, NoAppliedTags, MoreTags, TagFilterContainer } from './TagFilterStyles'
 
 class TagFilter extends Component {
   state = {
@@ -74,7 +74,7 @@ class TagFilter extends Component {
               </Tag>
             </TagContainer>
           ))}
-        {!filter && <NoAppliedTags>...{this.filterTags().length - 25} more</NoAppliedTags>}
+        {!filter && <MoreTags>...{this.filterTags().length - 25} more</MoreTags>}
       </TagFilterContainer>
     )
   }

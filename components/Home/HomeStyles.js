@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Radio } from 'antd'
+import { Col, Radio } from 'antd'
 
 export const RadioButton = styled(Radio.Button)`
   &.ant-radio-button-wrapper {
@@ -20,4 +20,14 @@ export const RadioButton = styled(Radio.Button)`
   }
 `
 
-export default RadioButton
+export const TopFilters = styled.div`
+  margin-bottom: 10px;
+`
+
+export const Tags = styled(Col)`
+  margin-top: 40px;
+
+  @media (max-width: 768px) {
+    margin-top: 0;
+  }
+`
