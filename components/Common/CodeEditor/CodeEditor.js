@@ -5,7 +5,7 @@ import Select from 'uikit/Select'
 import { EditorContainer, ErrorMessage } from './CodeEditorStyle'
 
 import 'codemirror/lib/codemirror.css'
-import 'codemirror/theme/darcula.css'
+// import 'codemirror/theme/darcula.css'
 import 'codemirror/mode/apl/apl'
 import 'codemirror/mode/asciiarmor/asciiarmor'
 import 'codemirror/mode/asn.1/asn.1'
@@ -308,7 +308,7 @@ class CodeEditor extends Component {
             options={{
               readOnly: readonly ? 'nocursor' : false,
               mode: selectedMode,
-              theme: 'darcula',
+              // theme: 'darcula',
               lineNumbers: true,
             }}
             onChange={this.codeChangeHandler}
