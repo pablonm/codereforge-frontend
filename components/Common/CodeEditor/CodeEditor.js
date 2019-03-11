@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
-import * as CodeMirror from 'react-codemirror2'
 import { Row, Col } from 'antd'
 import Select from 'uikit/Select'
 import { EditorContainer, ErrorMessage } from './CodeEditorStyle'
@@ -127,6 +126,9 @@ import 'codemirror/mode/yacas/yacas'
 import 'codemirror/mode/yaml/yaml'
 import 'codemirror/mode/yaml-frontmatter/yaml-frontmatter'
 import 'codemirror/mode/z80/z80'
+
+// eslint-disable-next-line import/order
+import * as CodeMirror from 'react-codemirror2'
 
 const modes = [
   'apl',
