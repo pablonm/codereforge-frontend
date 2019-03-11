@@ -4,8 +4,6 @@ import { Row, Col } from 'antd'
 import Select from 'uikit/Select'
 import { EditorContainer, ErrorMessage } from './CodeEditorStyle'
 
-import 'codemirror/lib/codemirror.css'
-// import 'codemirror/theme/darcula.css'
 import 'codemirror/mode/apl/apl'
 import 'codemirror/mode/asciiarmor/asciiarmor'
 import 'codemirror/mode/asn.1/asn.1'
@@ -126,6 +124,8 @@ import 'codemirror/mode/yacas/yacas'
 import 'codemirror/mode/yaml/yaml'
 import 'codemirror/mode/yaml-frontmatter/yaml-frontmatter'
 import 'codemirror/mode/z80/z80'
+import 'codemirror/lib/codemirror.css'
+import 'codemirror/theme/darcula.css'
 
 // eslint-disable-next-line import/order
 import * as CodeMirror from 'react-codemirror2'
@@ -308,7 +308,7 @@ class CodeEditor extends Component {
             options={{
               readOnly: readonly ? 'nocursor' : false,
               mode: selectedMode,
-              // theme: 'darcula',
+              theme: 'darcula',
               lineNumbers: true,
             }}
             onChange={this.codeChangeHandler}
