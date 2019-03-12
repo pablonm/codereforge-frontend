@@ -304,7 +304,7 @@ class CodeEditor extends Component {
           <UnControlled
             value={code}
             editorDidMount={editor => {
-              editor.refresh()
+              setTimeout(() => editor.refresh(), 1000)
             }}
             options={{
               readOnly: readonly ? 'nocursor' : false,

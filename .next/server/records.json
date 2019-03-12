@@ -27,16 +27,16 @@
   },
   "chunks": {
     "byName": {
-      "static\\sR2vXRIhuA8qen1PZn3pn\\pages\\_app.js": 1,
-      "static\\sR2vXRIhuA8qen1PZn3pn\\pages\\_document.js": 2,
-      "static\\sR2vXRIhuA8qen1PZn3pn\\pages\\_error.js": 3,
-      "static\\sR2vXRIhuA8qen1PZn3pn\\pages\\index.js": 4,
-      "static\\sR2vXRIhuA8qen1PZn3pn\\pages\\post.js": 5,
-      "static\\sR2vXRIhuA8qen1PZn3pn\\pages\\post\\new.js": 6,
-      "static\\sR2vXRIhuA8qen1PZn3pn\\pages\\redirect.js": 7,
-      "static\\sR2vXRIhuA8qen1PZn3pn\\pages\\users\\leaderboard.js": 8,
-      "static\\sR2vXRIhuA8qen1PZn3pn\\pages\\users\\profile.js": 9,
-      "static\\sR2vXRIhuA8qen1PZn3pn\\pages\\users\\profile\\me.js": 10
+      "static\\PY0TC639QlcSYJuZXl~QK\\pages\\_app.js": 1,
+      "static\\PY0TC639QlcSYJuZXl~QK\\pages\\_document.js": 2,
+      "static\\PY0TC639QlcSYJuZXl~QK\\pages\\_error.js": 3,
+      "static\\PY0TC639QlcSYJuZXl~QK\\pages\\index.js": 4,
+      "static\\PY0TC639QlcSYJuZXl~QK\\pages\\post.js": 5,
+      "static\\PY0TC639QlcSYJuZXl~QK\\pages\\post\\new.js": 6,
+      "static\\PY0TC639QlcSYJuZXl~QK\\pages\\redirect.js": 7,
+      "static\\PY0TC639QlcSYJuZXl~QK\\pages\\users\\leaderboard.js": 8,
+      "static\\PY0TC639QlcSYJuZXl~QK\\pages\\users\\profile.js": 9,
+      "static\\PY0TC639QlcSYJuZXl~QK\\pages\\users\\profile\\me.js": 10
     },
     "bySource": {
       "0 node_modules/next/dist/build/webpack/loaders/next-babel-loader.js??ref--4!components/Post/Post.js ../Common/CodeEditor/CodeEditor": 0,
