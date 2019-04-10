@@ -6,7 +6,7 @@
       {
         "root": ["./"],
         "alias": {
-          "hoc": "./components/hoc",
+          "hoc": "./components/HOC",
           "uikit": "./components/uikit",
           "Common": "./components/Common",
           "components": "./components"
